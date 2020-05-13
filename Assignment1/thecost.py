@@ -1,14 +1,14 @@
 import math
 
-#Larry's test example in Assignment1
+#Larry's test-problem in Assignment1
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #
 #this retrieves the number of color pages printing from a terminal input
 colorPages = input("what is the number of pages in color? >>>")
-#Then convert the string to an integer
+#Then this converts the string into an integer
 numColorPages = int(colorPages)
 
-#this retrieves the number of black and white pages printing from a terminal input
+#This retrieves the number of black and white pages printing from a terminal input
 bwPages = input("what is the number of page in black and white? >>>")
 #this next line converts the string into a an integer that can then be manipulated with math
 numBWPages = int(bwPages)
