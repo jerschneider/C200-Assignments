@@ -1,9 +1,9 @@
 # Code 0
 #x23 = 4
-print("Code Snippet 0: Does not break")
+print("Code 0: Does not break")
 #Code 1
 #123 = 456
-print("Code 1: You have to assign the '=' to a variable not a number")
+print("Code 1: You have to assign the '=' to a variable not a number, like an integer can't be a varible")
 #Code 2
 #x~~1 = "Tomato"
 print("Code 2: '~' is an invalid character to use")
@@ -34,4 +34,5 @@ print("Code 8: this is similar to Code8, it's an incomplete/hanging command, but
 #1tomato = 1
 print("Code 9: I am unclear what the intent is here, if you remove the 1 infront of 'tomato' then the command works")
 #Code 10
-greetings = "greetings"
+#greetings = greetings
+print("Code 10: this is simnilar to code9, it's an error as it tries to define a variable as a varibale which is undefined")
