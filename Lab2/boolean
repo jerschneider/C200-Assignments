@@ -1,0 +1,23 @@
+#notes from Mr. German's end of lab nano session
+boolean
+
+the boolean type: true, false
+1 < 2
+
+Operators for boolean type: not, and, or
+a       b       not and         a or b
+---------------------------------------
+
+Please simplify the following expression:
+not a
+
+a == True
+a == False
+a and (not a)
+a or (not a)    true
+
+Last one is like simplify 1 * n which is n
+                          0 * n          0
+                          2n - n - n     0
+
+
