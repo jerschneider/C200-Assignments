@@ -1,8 +1,3 @@
-# to get this work on my *nix machines, I had to install pip manually for python3
-
-#https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3
-
-
 import pygame
 import random
 
@@ -251,7 +246,7 @@ def draw_next_shape(shape, surface):
 def update_score(nscore):
     score = max_score()
 
-    with open('scores.txt', 'w') as f:
+    with open('/home/jeremy/Documents/C200-Assignments-jerschne/Lab3/scores.txt', 'w') as f:
         if int(score) > nscore:
             f.write(str(score))
         else:
@@ -298,7 +293,7 @@ def draw_window(surface, grid, score=0, last_score = 0):
     pygame.draw.rect(surface, (255, 0, 0), (top_left_x, top_left_y, play_width, play_height), 5)
 
     draw_grid(surface, grid)
-    #pygame.display.update()
+    pygame.display.update()
 
 
 def main(win):  # *
@@ -401,4 +396,4 @@ def main_menu(win):  # *
 
 win = pygame.display.set_mode((s_width, s_height))
 pygame.display.set_caption('Tetris')
-main_menu(win)
+main(win)
