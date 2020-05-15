@@ -1,3 +1,8 @@
+#to get this to work I had to do a few things:
+#--->I had to install pip on my *nix machine manually
+#and I used this guide https://stackoverflow.com/questions/6587507/how-to-install-pip-with-python-3
+#----> I had to change the scores.txt location in this program to the exact directory it would be found-
+#           SO i had to put /home/jeremy/Documents/C200-Assignments-jerschne/Lab3/scores.txt' where it was appropriate
 import pygame
 import random
 
