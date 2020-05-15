@@ -56,15 +56,15 @@ def what(number):
 # a == False
 # is exactly the same as ----> not a
 # this simplifies a statement
-a           a == False          not a 
------------------------------------------
-True        False               False
-False       True                True
-
-a           a == True           ?
------------------------------------------
-True        True               True
-False       False              False
+#a           a == False          not a 
+#-----------------------------------------
+#True        False               False
+#False       True                True
+#
+#a           a == True           ?
+#-----------------------------------------
+#True        True               True
+#False       False              False
 
 
 
