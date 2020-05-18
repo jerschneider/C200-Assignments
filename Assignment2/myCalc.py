@@ -1,13 +1,8 @@
 import math # You might or might not need this
 
 def speed(distance, time):
-    d = int(input("what is your distance in miles?: "))
-    distance = float(d)
-    t = int(input("what is your time in hours?: "))
-    time = float(t)
-    speed = (distance / time)
-    roundedSpeed = round(speed, 2)
-    return roundedSpeed
+    Speed = (distance / time)
+    return Speed 
 #    """
 #    Calculate the speed based on the distance time. 
 #   Parameters: distance is in miles and time in hour
@@ -16,12 +11,16 @@ def speed(distance, time):
 #    #pass # Remove as needed
 
 def distance(speed, time):
-    """
-    Caluclates the distance travelled 
-    Paramters: speed is in MPH and time in hour
-    Returns: Distance in Miles
-    """
-    pass # Remove as needed
+   Distance = (time * speed)
+   return Distance
+   
+   
+    #"""
+    #Caluclates the distance travelled 
+    #Paramters: speed is in MPH and time in hour
+    #Returns: Distance in Miles
+    #"""
+    #pass # Remove as needed
 
 def time(speed, distance):
     """
@@ -156,7 +155,8 @@ def quadraticFormula(a, b, c):
 
 
 ###### Testing Code ######
-if roundedSpeed == (distance / time):
+#/\this command is call to an internal (python) function
+if __name__ == "__main__":
     print("Speed: ", round(speed(100, 60), 2), " miles / hour")
     print("Speed: ", round(speed(1234, 10), 2), " miles / hour")
     print("Speed: ", round(speed(32, 60), 2), " miles / hour")
