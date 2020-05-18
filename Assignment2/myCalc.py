@@ -13,8 +13,6 @@ def speed(distance, time):
 def distance(speed, time):
    Distance = (time * speed)
    return Distance
-   
-   
     #"""
     #Caluclates the distance travelled 
     #Paramters: speed is in MPH and time in hour
@@ -23,70 +21,72 @@ def distance(speed, time):
     #pass # Remove as needed
 
 def time(speed, distance):
-    """
-    Calculates the time travelled
-    Parameters: speed in MPH, distance in Miles
-    Returns: Time in hours
-    """
-    pass # Remove as needed
+    Time = (distance / speed)
+    return Time
+#    """
+#    Calculates the time travelled
+#    Parameters: speed in MPH, distance in Miles
+#    Returns: Time in hours
+#    """
+#   pass # Remove as needed
 
 def hour2min(numHours):
-    """
-    Converts from hours to minutes
-    """
-    pass # Remove as needed
+    Hour2min = (60 * numHours)
+    return Hour2min
+    
+#    """
+#    Converts from hours to minutes
+#    """
+#    #pass # Remove as needed
 
 def min2hour(numMinutes):
-    """
-    Converts from minutes to hours
-    """
-    pass # Remove as needed
+    Min2hour = (numMinutes / 60)
+    return Min2hour
+#    """
+#    Converts from minutes to hours
+#    """
+#    pass # Remove as needed
 
 def min2sec(numMinutes):
-    """
-    Convert minutes to seconds
-    """
-    pass # Remove as needed
+    Min2sec = (numMinutes * 60)
+    return Min2sec 
+#    """
+#    Convert minutes to seconds
+#    """
+#    pass # Remove as needed
 
 def sec2min(numSec):
-    """
-    Convert seconds to minutes
-    """
-    pass # Remove as needed
+    Sec2min = (numSec / 60)
+    return Sec2min
+#    """
+#    Convert seconds to minutes
+#    """
+#    pass # Remove as needed
 
 def feet_to_mile(numFeet):
-    """
-    Convert feet to mile
-    """
-    pass # Remove as needed
+    Feet_to_mile = (numFeet / 5280)
+    return Feet_to_mile
 
 def miles_to_feet(numMile):
-    """
-    Convert mile to feet
-    """
-    pass # Remove as needed
-
+    Miles_to_feet = (numMile * 5280)
+    return Miles_to_feet
 
 def kilometers2miles(numKilo):
-    """
-    Convert kilometers to miles
-    """
-    pass # Remove as needed
+    Kilometer2miles = (numKilo / 1.60934)
+    return Kilometer2miles
 
 
 def miles2kilometers(numMiles):
-    """
-    Convert miles to kilometers
-    """
-    pass # Remove as needed
+    Miles2kilometers = (numMiles * 1.60934)
+    return Miles2kilometers
+
 
 def degrees_to_radians(numDegrees):
-    """
-    Convert degrees to radians
-    """
-    pass # Remove as needed
+    Degrees_to_radians = (numDegrees * (math.pi / 180))
+    return Degrees_to_radians
 
 def sideLengthTriangle(a, b, gamma):
+   
     """
     Finds the length of side C of a triangle (Law of Cosines) where gamma is degrees 
     is converted to radians.
