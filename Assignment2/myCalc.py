@@ -90,33 +90,21 @@ def sideLengthTriangle(a, b, gamma):
    return SideLengthTriangle
 
 def celsius2fahrenheit(numDegC):
-    """
-    Convert celsius to fahrenheit
-    """
-    pass # Remove as needed
+   Celsius2fahrenheit = (9 / 5) * numDegC + 32
+   return Celsius2fahrenheit
 
 def fahrenheit2celsius(numDegF):
-    """
-    Convert fahrenheit to celsius
-    """
-    pass # Remove as needed
+   Fahrenheit2celsius = (numDegF -32) / (9 / 5)
+   return Fahrenheit2celsius
 
 def kelvin2fahrenheit(numKel):
-    """
-    Convert Kelvin to fahrenheit
-    """
-    pass # Remove as needed
-
+    kelvin2Celsius = numKel - 273
+    Kelvin2fahrenheit = (9 / 5) * kelvin2Celsius +32
+    return Kelvin2fahrenheit
 
 def pc(s, d):
-    """
-    This function (denoted by PC) in the formulas given.
-
-    Given a stock price p and amount change +/- d, calculates the percentage difference
-    Parameters: Stock price (s), dollar amount of change (d)
-    Return: Percent change
-    """
-    pass # Remove as needed
+    Pc = ((s + d) - s) / s * 100
+    return Pc
 
 def parsecs2kilometer(numParsecs):
     """
