@@ -86,14 +86,8 @@ def degrees_to_radians(numDegrees):
     return Degrees_to_radians
 
 def sideLengthTriangle(a, b, gamma):
-   
-    """
-    Finds the length of side C of a triangle (Law of Cosines) where gamma is degrees 
-    is converted to radians.
-    Parameters: a (side length), b (side length), gamma (degrees of angle)
-    Return: Length of side C
-    """
-    pass # Remove as needed
+   SideLengthTriangle = (math.sqrt(((a * a) + (b * b)) - (2 * a * b) * (math.cos(gamma * (math.pi / 180)))))
+   return SideLengthTriangle
 
 def celsius2fahrenheit(numDegC):
     """
