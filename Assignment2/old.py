@@ -1,6 +1,7 @@
 import math
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#Problem 1
+#Problem 2
+
 #tomato will be passed through this function
 def themath(tomato):
     Themath = (tomato *150)-15
@@ -8,16 +9,23 @@ def themath(tomato):
 
 print("Assignment 1 Problem 2: " + str(themath(10)))
 
-#tomato = 10
-#potato = (tomato * 150)-15
-#print("potato is:")
-#print(potato)
 
-#theLast = math.sqrt(potato)
-#print("theLast is:")
-#print(theLast)
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-#Problem 2
-
 #Problem 3
+def thecost(numColorPages, numBWPages):
+    Thecost = (numColorPages * .25) + (numBWPages * .04)
+    return Thecost
+
+print("Assignment 1 Problem 3: " + str(thecost(4, 2)))
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Problem 4
+
+def bouncing(radius):
+    Ball = (4/3) * (math.pi) * (radius ** (3))
+    Bouncing = round(Ball)
+    return Bouncing
+
+print("Assignment 1 Problem 4: " + str(bouncing(5.5)))
+
+
