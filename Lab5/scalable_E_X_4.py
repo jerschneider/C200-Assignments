@@ -20,3 +20,15 @@ for line in range(size):
         else:  
             row = row + " "
     print(row)
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Scalable 4
+size = int(input("What size for the FOUR: "))
+for line in range(size):
+    row = ""
+    for column in range(size):
+        if line + column == size//2 or (line == size//2 and column < 2*size//3) or (column == size//2):
+            row = row + "* " 
+        else:  
+            row = row + " "
+    print(row)
