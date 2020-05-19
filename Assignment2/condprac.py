@@ -19,9 +19,25 @@ def fun1(x, y, z):
         output += 'Made it to the end!'
     return output
 
-def fun1_reworked(x, y, z):
-    '''Rewrite fun1, but do not use elif or else. Only if is allowed.'''
-    pass # TODO
+def fun1_reworked(x, y, z): #elif combines two conditions, so I need to figure out how to do this through if
+    output = ""
+    if type(x) == list:
+        output += 'x is a list'
+    if not type(x) == list:
+        if y < len(z):
+            return
+        if not y < len(z):
+            if len(x) + len(z) > y:
+                output += 'There are some long iterables'
+            if not len(x) + len(z) > y:
+                if y:
+                    output += 'Yeah, ' + str(y) + ' is a pretty good number.'
+                if not y:
+                    output += 'Made it to the end!'
+    return output
+        #elif ---> says not the first one but the second
+        #else ---> if x then if not x
+        #inversion of the conditional statement
 
 
 # Problem 2
@@ -57,4 +73,3 @@ if __name__ == "__main__":
     print('Testing (1, 1, 0): output: ' + str(fun2_reworked(1, 1, 0)) + ' expected: ' + str(fun2(1, 1, 0)))
     print('Testing (1, 1, 1): output: ' + str(fun2_reworked(1, 1, 1)) + ' expected: ' + str(fun2(1, 1, 1)))
     print('-----------------------------------------------------')
-    
