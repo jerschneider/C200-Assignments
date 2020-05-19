@@ -107,32 +107,20 @@ def pc(s, d):
     return Pc
 
 def parsecs2kilometer(numParsecs):
-    """
-    Convert parsecs to kilometers
-    """
-    pass # Remove as needed
+    Parsecs2kilometer = (numParsecs / (10 ** 13)) / 3.086
+    return Parsecs2kilometer
 
 def kilometer2parsecs(numKilo):
-    """
-    Convert kilometers to parsecs
-    """
-    pass # Remove as needed
+    Kilometer2parsecs = 3.086 * (10 ** 13) * numKilo
+    return Kilometer2parsecs
 
 def lightyears2parsecs(numLY):
-    """
-    Convert lightyear to parsecs
-    """
-    pass # Remove as needed
+    Lightyears2parsecs = numLY / 3.26
+    return Lightyears2parsecs
 
 def quadraticFormula(a, b, c):
-    """
-    Here we have the quadratic formula.
-
-    Notice that we have a possibility of 2 values. Return both values in a tuple.
-    Return: Tuple(using + sign, using - sign)
-    If the value of the disciminant is negative, return a tuple of (0, 0)
-    """
-    pass # Remove as needed
+   QuadraticFormula = [(-b) - (math.sqrt((b ** 2) - 4 * a *c))) / (2 * a)], [((-b) + (math.sqrt((b ** 2) - 4 * a *c))) / (2 * a)]
+   return QuadraticFormula
 
 
 
