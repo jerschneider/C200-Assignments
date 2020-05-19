@@ -7,7 +7,6 @@ def themath(tomato):
     Themath = (tomato *150)-15
     return Themath
 
-print("Assignment 1 Problem 2: " + str(themath(10)))
 
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -16,7 +15,6 @@ def thecost(numColorPages, numBWPages):
     Thecost = (numColorPages * .25) + (numBWPages * .04)
     return Thecost
 
-print("Assignment 1 Problem 3: " + str(thecost(4, 2)))
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Problem 4
@@ -26,6 +24,7 @@ def bouncing(radius):
     Bouncing = round(Ball)
     return Bouncing
 
+
+print("Assignment 1 Problem 2: " + str(themath(10)))
+print("Assignment 1 Problem 3: " + str(thecost(4, 2)))
 print("Assignment 1 Problem 4: " + str(bouncing(5.5)))
-
-
