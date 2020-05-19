@@ -119,8 +119,15 @@ def lightyears2parsecs(numLY):
     return Lightyears2parsecs
 
 def quadraticFormula(a, b, c):
-   QuadraticFormula = [(-b) - (math.sqrt((b ** 2) - 4 * a *c))) / (2 * a)], [((-b) + (math.sqrt((b ** 2) - 4 * a *c))) / (2 * a)]
-   return QuadraticFormula
+  discriminant = (b ** 2 - (4 * a * c))
+  if (discriminant < 0):
+    return (0, 0)
+  else: #bc ou can not take the square root of a negative number I had to seperate the square root from the formula
+        #which is why plugging the whole formula was ineffective at completeting this problem
+        #QuadraticFormula = [(-b) - (math.sqrt((b ** 2) - 4 * a *c))) / (2 * a)], [((-b) + (math.sqrt((b ** 2) - 4 * a *c))) / (2 * a)
+    discriminant = math.sqrt(discriminant)
+    return (((-b + discriminant)/ (2 * a)),((-b - discriminant) / (2 * a)))
+
 
 
 

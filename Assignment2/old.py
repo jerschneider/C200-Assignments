@@ -1,5 +1,5 @@
 import math
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Problem 1
 #tomato will be passed through this function
 def themath(tomato):
@@ -16,7 +16,8 @@ print("Assignment 1 Problem 2: " + str(themath(10)))
 #theLast = math.sqrt(potato)
 #print("theLast is:")
 #print(theLast)
-
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #Problem 2
+
 #Problem 3
 #Problem 4
