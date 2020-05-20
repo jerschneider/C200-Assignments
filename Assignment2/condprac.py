@@ -45,6 +45,26 @@ def fun2(a, b, c):
     return bool(b and not ((not (a and b) and (not b or not c)) or (not c and not a)))
 
 def fun2_reworked(a, b, c):
+   if q and X or Y
+   return False
+   else return True
+   
+
+
+   
+   
+    if (c or a):
+        return True
+    else False
+
+
+
+
+# not (not a) = a
+#not (not a and not b) = a or b
+
+    
+    
     '''Rewrite fun2, but do not use 'not' at all.'''
     pass # TODO
 
