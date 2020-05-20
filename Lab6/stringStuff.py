@@ -2,16 +2,30 @@
 # # palindrome: String -> Boolean
 
 def palindrome(x):
-    """
-    For a given string, determine if the string is a palindrome. (The same forward and back)
+#    for c in x:
+#        print(c)
+#    return True
+   #answer = True
+   for i in range(len(x)):
+       #print("-->", x[i])
+       if (x[i] == x[(len(x)-1)-i]):
+           #check character at i against the chracter i positions to the left of the last character
+       #    premature optimization is the root of all evil
+       #    what about negative indexing? -->says Mr. German
+       # madam
+       # 01234 4 == len("madam") - 1
+        return True
 
-    Input: String of any size (including empty)
+    #"""
+    #For a given string, determine if the string is a palindrome. (The same forward and back)
+#
+ #   Input: String of any size (including empty)
 
-    Return: Boolean (True if palindrome, False otherwise)
-
-    Limitation: You must use a loop. Only functions allowed to be used is len or range (if needed). Cannot use "in" besides "for var in container"
-    """
-    pass
+   # Return: Boolean (True if palindrome, False otherwise)
+#
+  #  Limitation: You must use a loop. Only functions allowed to be used is len or range (if needed). Cannot use "in" besides "for var in container"
+    #"""
+    #pass
 
 
 def getCount(char, strng):
@@ -55,6 +69,8 @@ def areEqual(str1, str2):
 if __name__ == "__main__":
     
     print("Palindrome")
+    print("civic: ", palindrome("civic"), "Expected: ", True)
+
     print("Actual: ", palindrome("aba"), " Expected: ",  True)
     print("Actual: ", palindrome("a"), " Expected: ",  True)
     print("Actual: ", palindrome("abba"), " Expected: ",  True)
