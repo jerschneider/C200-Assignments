@@ -1,16 +1,28 @@
 #These are the notes for Lab6 while we worked on Assignment3
 
 def minVal(theLst):
-    """
-    Given a list, determine the minimum value in the list
-
-    Input: A list numbers of any length (at least 1 item in the list)
-
-    Return: Value of minimum value
-
-    Limitation: The only function you can use (if you want to) is `len()` and `range()`. Cannot use "in" besides "for var in container"
-    """
-    pass
+    smallestThusFar = theLst[0]
+    for var in theLst:
+        if var < smallestThusFar:
+            smallestThusFar = var
+    return smallestThusFar 
+    
+    sum = theLst[0]
+    for var in theLst:
+        #sum = sum + var
+        if var < sum:
+            sum = var
+    return sum
+#    """
+#    Given a list, determine the minimum value in the list
+#
+#    Input: A list numbers of any length (at least 1 item in the list)
+#
+#    Return: Value of minimum value
+#
+#    Limitation: The only function you can use (if you want to) is `len()` and `range()`. Cannot use "in" besides "for var in container"
+#    """
+    #pass
 
 def minValIndex(theLst):
     """
@@ -87,7 +99,7 @@ def tripTotal(logs):
     """
     pass
 
-
+#Mr. German had us had the expected values by simply looking at the list
 if __name__ == "__main__":
     print("Testing Cases")
     lst1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
