@@ -45,29 +45,33 @@ def fun2(a, b, c):
     return bool(b and not ((not (a and b) and (not b or not c)) or (not c and not a)))
 
 def fun2_reworked(a, b, c):
-   if q and X or Y
-   return False
-   else return True
-   
-
-
-   
-   
     if (c or a):
+        Y = False
+    else:
+        Y = True
+    if (c or a):
+        Y = False
+    else:
+        Y = True
+    if (a and b):
+        Q = False
+    else:
+        Q = True
+    if (b and c):
+        X = False
+    else: 
+        X = True
+    if Q and X or Y:
+        W = False
+    else:
+        W = True
+    if b and W:
         return True
-    else False
-
-
-
-
-# not (not a) = a
-#not (not a and not b) = a or b
-
-    
-    
-    '''Rewrite fun2, but do not use 'not' at all.'''
-    pass # TODO
-
+    else:
+        return False
+   
+# giving (var and var) statement placeholders, which helps to avoid the not statement --->which is why I chose Y, Q, X. W
+   
 
 if __name__ == "__main__":
     print('Testing fun1 and fun1_reworked (Problem 1):')
