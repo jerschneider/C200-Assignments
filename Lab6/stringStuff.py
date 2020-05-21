@@ -8,13 +8,14 @@ def palindrome(x):
    #answer = True
    for i in range(len(x)):
        #print("-->", x[i])
-       if (x[i] == x[(len(x)-1)-i]):
+       if not (x[i] == x[(len(x)-1)-i]):
            #check character at i against the chracter i positions to the left of the last character
        #    premature optimization is the root of all evil
        #    what about negative indexing? -->says Mr. German
        # madam
        # 01234 4 == len("madam") - 1
-        return True
+                return False
+    return True
 
     #"""
     #For a given string, determine if the string is a palindrome. (The same forward and back)
