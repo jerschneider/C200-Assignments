@@ -26,16 +26,20 @@ def minValIndex(theLst):
 
 
 def minValTuple(theLst):
-    """
-    Given a list, determine the minimum value and index in the list
-
-    Input: A list numbers of any length (at least 1 item in the list)
-
-    Return: Tuple, first item is the smallest value, second item is the index of the value (the last occurence)
-
-    Limitation: The only function you can use (if you want to) is `len()` and `range()`. Cannot use "in" besides "for var in container"
-    """
-    pass
+    MinVal = theLst[0] 
+    for var in theLst:
+        if var < MinVal: 
+            MinVal = var
+    MinValIndex = theLst.index(MinVal)
+    tup1 = (MinVal, MinValIndex)
+    MinValTuple = tup1
+    return MinValTuple
+   
+   
+   
+   
+   
+    
 
 def maxVal(theLst):
     """
