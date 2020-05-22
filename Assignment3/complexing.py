@@ -26,13 +26,16 @@ def positionalSum(a, b):
    for index in range(theLength):
         answer = answer + [ a[index] + b[index] ]
    return answer
-    
-    
-print( positionalSum([1, 2, 3, 4,], [4, 3, 2]) ) #[5, 5, 5]
-    
+
+print("")
+print("positionalSum Test")
+print("Actual: ", positionalSum([1, 2, 3, 4,], [4, 3, 2]), "Expected:  [5, 5, 5]")    
+print("Actual: ", positionalSum([1, 1, 6, 7,], [9, 4, 9]), "Expected:  [10, 5, 15]")    
+print("")
+
+
 
 # scalarMatrix: Number, Matrix -> Matrix 
-#
 def scalarMatrix(n, m):
     """
     Given a matrix, size a x b, multiply each position by n. 
@@ -60,7 +63,7 @@ def scalarMatrix(n, m):
     #print(n, m)
     #
     #
-    #use scalable 4 code for this
+    #use scalable 4 code from lab for this
     result = []
     for row in m:
         newRow = []
@@ -73,10 +76,31 @@ def scalarMatrix(n, m):
    # print ("done with matrix: ", result)
     return result
 
-print( scalarMatrix(3, [[1, 2, -3], [5, 3, 4]]) ) # [[3, 6, -9], [15, 9, 12]]
+print("")
+print("scalarMatrix Test")
+print("Actual: ", scalarMatrix(3, [[1, 2, -3], [5, 3, 4]]), "Expected:  [[3, 6, -9], [15, 9, 12]]")
+print("Actual: ", scalarMatrix(4, [[1, 2, -3], [5, 3, 4]]), "Expected:  [[4, 8, -12], [20, 12, 16]]")
+print ("")
+#([1, 1, 6, 7,], [9, 4, 9]), "Expected:  [10, 5, 15]")    
+
 
 def isSubString(sub, longStr):
-    """
+    if sub:
+        sub_len = len(sub)
+        for var in range(len(longStr)):
+            if longStr[var:var + sub_len] == sub:
+                return True
+    return False
+
+print("")
+print("isSubString Test")
+print("Actual: ", isSubString("here", "there"), "Expected: ", True)
+print("Actual: ", isSubString("boop", "zoopity"), "Expected: ", False)
+print("Actual: ", isSubString("hare", "whatever"), "Expected: ", False)
+print("Actual: ", isSubString("ate", "whatever"), "Expected: ", True)
+print("") 
+   
+"""
     Determine if a string exists in another string. 
 
     Not allowed to check for direct membership. You need to use looping
@@ -93,15 +117,24 @@ def isSubString(sub, longStr):
     >>> isSubString("orange", "Concatenate")  # False
     >>> isSubString("acsd", "car")  # False
     """
-   # pass
-isSubString("here", "there")
-isSubString("here", "their")
-isSubString("hat", "whatever")
-isSubString("ate", "whatever")
-isSubString("hare", "whatever")
 
 def whereSubString(sub, longStr):
-    """
+    for var in range(len(longStr) - len(sub) + 1): 
+        if longStr[var:var + len(sub)] == sub:
+            return var
+    return -1 
+
+
+
+print("")
+print("whereSubString Test")
+print("Actual: ", whereSubString("shake", "shakespeare"), "Expected : 0") #0 position example
+print("Actual: ", whereSubString("boop", "bippityboppity"), "Expected : -1") #this is an example of the -1 return working
+print("Actual: ", whereSubString("cat", "Concatenateare"), "Expected : 3")
+print("Actual: ", whereSubString("cat", "shakespeareConcatenateare"), "Expected : 14") #lol :)
+print("")
+    
+"""
     Determine last position of the start of a substring occurs. 
 
     Not allowed to check for direct membership. You need to use looping
@@ -118,5 +151,4 @@ def whereSubString(sub, longStr):
     >>> whereSubString("cat", "Concatenate")  # 3
     >>> whereSubString("orange", "Concatenate")  # -1
     >>> whereSubString("acsd", "car")  # -1
-    """
-    pass
+"""

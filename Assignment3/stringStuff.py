@@ -115,4 +115,4 @@ if __name__ == "__main__":
     print("Actual: ", areEqual(s3, s2), "Expected: ", False)
     print("Actual: ", areEqual(s1, s1), "Expected: ", True)
     #test code from lab
-    print("Actual Tom Tomato Cruise: ", areEqual("Tom", "Tomato"), "Expected: ", False)
+    print(" Tom Tomato Cruise >>> Actual: ", areEqual("Tom", "Tomato"), " Expected: ", False)
