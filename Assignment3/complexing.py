@@ -31,7 +31,8 @@ def positionalSum(a, b):
 print( positionalSum([1, 2, 3, 4,], [4, 3, 2]) ) #[5, 5, 5]
     
 
-
+# scalarMatrix: Number, Matrix -> Matrix 
+#
 def scalarMatrix(n, m):
     """
     Given a matrix, size a x b, multiply each position by n. 
@@ -55,7 +56,24 @@ def scalarMatrix(n, m):
       [30, -3, 6]]
 
     """
-    pass
+  #  pass
+    #print(n, m)
+    #
+    #
+    #use scalable 4 code for this
+    result = []
+    for row in m:
+        newRow = []
+        for elem in row:
+            newRow = newRow + [ elem * n ]
+            #print ("adding: ", newRow)
+        #print ("done: ", newRow)
+        result = result + [ newRow ]
+       # print ("adding to matrix: ", result)
+   # print ("done with matrix: ", result)
+    return result
+
+print( scalarMatrix(3, [[1, 2, -3], [5, 3, 4]]) ) # [[3, 6, -9], [15, 9, 12]]
 
 def isSubString(sub, longStr):
     """
