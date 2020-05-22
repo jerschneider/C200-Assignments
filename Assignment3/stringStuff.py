@@ -47,9 +47,9 @@ def getIndex(char, strng):
     """
     #pass 
 #go back and edit this
-    for value in range(len(strng)):
-        if char == strng[value]:
-            return value
+    for var in range(len(strng)):
+        if char == strng[var]:
+            return var
     return len(strng)
 
 def areEqual(str1, str2):
@@ -69,12 +69,12 @@ def areEqual(str1, str2):
     #else:
      #   return False
     
-    #This is the code from lab 
+    #This is the code from lab which Mr. German suggested as an alternative to Leo's approach
     if len(str1) != len(str2):
         return False
     for i in range(len(str1)):
         if str1[i] == str2[i]:
-            pass
+            pass #this stops the loop
         else:
             return False
     return True
