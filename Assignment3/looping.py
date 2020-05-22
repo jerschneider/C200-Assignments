@@ -10,24 +10,27 @@ def minVal(theLst):
 
 
 def minValIndex(theLst):
-    MinVal = theLst[0] 
+    Index = 0
+    MinVal = theLst[0] #starting point is at position 0 for the forloop
     for var in theLst:
-        if var < MinVal: 
+        if var <= MinVal: # <= this is used to help with my counting of the indexes
             MinVal = var
-    MinValIndex = theLst.index(MinVal) #I used the same code from the previous problem but added the index function to the minVal holder
-    return MinValIndex
+            MinValIndex = Index #this records the current index
+        Index = Index + 1 #as the forloop loops then this will go up (or counts)
+    return MinValIndex 
 
 
 def minValTuple(theLst):
+    Index = 0
     MinVal = theLst[0] 
     for var in theLst:
-        if var < MinVal: 
+        if var <= MinVal: 
             MinVal = var
-    MinValIndex = theLst.index(MinVal) 
-    tup1 = (MinVal, MinValIndex)
-    MinValTuple = tup1
+            MinValIndex = Index
+        Index = Index + 1
+        tup1 = (MinVal, MinValIndex)
+        MinValTuple = tup1
     return MinValTuple
-   
 
 def maxVal(theLst):
     MaxVal = theLst[0]
@@ -37,20 +40,23 @@ def maxVal(theLst):
     return MaxVal
 
 def maxValIndex(theLst):
+    Index = 0
     MaxVal = theLst[0]
     for var in theLst:
-        if var > MaxVal: 
+        if var >= MaxVal: 
             MaxVal = var
-    MaxValIndex = theLst.index(MaxVal)
+            MaxValIndex = Index
+        Index = Index + 1
     return MaxValIndex
-    
 
 def maxValTuple(theLst):
+    Index = 0
     MaxVal = theLst[0] 
     for var in theLst:
-        if var > MaxVal: 
+        if var >= MaxVal: 
             MaxVal = var
-    MaxValIndex = theLst.index(MaxVal) 
+            MaxValIndex = Index
+        Index = Index + 1
     tup1 = (MaxVal, MaxValIndex)
     MaxValTuple = tup1
     return MaxValTuple
@@ -78,12 +84,6 @@ def tripTotal(logs):
 #        trip = list0Time + list1Time + list2Time
 #        TripTotal = trip
 #        return TripTotal
-
-
-
-
-
-
 
 if __name__ == "__main__":
     print("Testing Cases")
