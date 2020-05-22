@@ -1,0 +1,8 @@
+length_of_a = len(a)
+    length_of_b = len(b)
+    if length_of_a < length_of_b:
+        theLength = length_of_a
+    else:
+        theLength = length_of_b
+    for index in range(theLength):
+        print(a[index] +b[index])
