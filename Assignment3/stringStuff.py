@@ -28,16 +28,11 @@ def palindrome(x):
     #return True
 
 def getCount(char, strng):
-    """
-    Get the number of times a character appears in a string.
-
-    Input: A character (length 1) and a string of any length
-
-    Return: Number of times a character appears
-
-    Limitation: Only functions we have been taught in class. Must use a loop. Cannot use "in" besides "for var in container"
-    """
-    pass
+    count = 0 #set up a counter which I used in looping
+    for i in range(len(strng)): #but combined the previous functions setup to solve this. 
+        if(strng[i] == char):
+            count = count + 1
+    return count
 
 def getIndex(char, strng):
     """
