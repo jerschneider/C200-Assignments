@@ -93,7 +93,12 @@ def isSubString(sub, longStr):
     >>> isSubString("orange", "Concatenate")  # False
     >>> isSubString("acsd", "car")  # False
     """
-    pass
+   # pass
+isSubString("here", "there")
+isSubString("here", "their")
+isSubString("hat", "whatever")
+isSubString("ate", "whatever")
+isSubString("hare", "whatever")
 
 def whereSubString(sub, longStr):
     """

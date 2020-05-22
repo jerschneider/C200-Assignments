@@ -45,7 +45,12 @@ def getIndex(char, strng):
 
     Limitation: Only functions we have been taught in class. Must use a loop. Cannot use "in" besides "for var in container"
     """
-    pass 
+    #pass 
+#go back and edit this
+    for value in range(len(strng)):
+        if char == strng[value]:
+            return value
+    return len(strng)
 
 def areEqual(str1, str2):
     """
@@ -57,7 +62,22 @@ def areEqual(str1, str2):
 
     Limitation:  Must use a single loop, and only 1 return statement in the code. Cannot use "in" besides "for var in container"
     """
-    pass
+   #This is leo's code from lab which was incorrect because it didnt loop 
+   # pass
+   # if str1 == str2
+    #    return True
+    #else:
+     #   return False
+    
+    #This is the code from lab 
+    if len(str1) != len(str2):
+        return False
+    for i in range(len(str1)):
+        if str1[i] == str2[i]:
+            pass
+        else:
+            return False
+    return True
 
 
 if __name__ == "__main__":
@@ -94,3 +114,5 @@ if __name__ == "__main__":
     print("Actual: ", areEqual(s1, s2), "Expected: ", False)
     print("Actual: ", areEqual(s3, s2), "Expected: ", False)
     print("Actual: ", areEqual(s1, s1), "Expected: ", True)
+    #test code from lab
+    print("Actual Tom Tomato Cruise: ", areEqual("Tom", "Tomato"), "Expected: ", False)
