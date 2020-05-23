@@ -32,15 +32,14 @@ def minVal(theLst):
    # pass
 
 def minValIndex(theLst):
-    countIndex = 0
-    i = 0
-    MinVal = theLst[0]
-    while countIndex < len(theLst):
-        if countIndex <= MinVal:
-            MinVal = countIndex
-            MinValIndex = i 
-        i = i + 1
-    return MinValIndex
+   i = 0 
+   MinVal = theLst[0]
+   while i < len(theLst):
+       if theLst[i] < MinVal:
+           MinVal = theLst[i]
+           minValIndex = i
+       i = i + 1 # this is the same as >>>> i += 1 
+   return minValIndex
 
 
 """
