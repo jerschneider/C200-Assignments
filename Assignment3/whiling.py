@@ -77,7 +77,7 @@ def tripTotal(logs):
    while i < len(logs):
        var = logs[i] # for var in logs: >>>> in the for loop var is automatically var = log[i]
        time = time + (var[0] / var[1])
-   i = i + 1 
+       i = i + 1 
    return time
 
 
