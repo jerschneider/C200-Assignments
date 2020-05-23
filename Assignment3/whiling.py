@@ -110,7 +110,7 @@ def maxVal(theLst):
     while i < len(theLst):
         if theLst[i] > MaxVal:
             MaxVal = theLst[i]
-        i = i + 1 # this is the same as >>>> i += 1 
+        i = i + 1  
     return MaxVal
     
     
@@ -126,7 +126,20 @@ def maxVal(theLst):
    # pass
 
 def maxValIndex(theLst):
-    """
+    i = 0 
+    MaxVal = theLst[0]
+    while i < len(theLst):
+        if theLst[i] > MaxVal:
+            MaxVal = theLst[i]
+            maxValIndex = i
+        i = i + 1
+    return maxValIndex
+    
+    
+    
+    
+    
+"""
     Given a list, determine the index of the maximum value (the last occurence)
 
     Input: A list numbers of any length (at least 1 item in the list)
@@ -134,8 +147,8 @@ def maxValIndex(theLst):
     Return: Index of the largest value (the last occurence)
 
     Limitation: The only function you can use (if you want to) is `len()` and `range()`. Cannot use "in" besides "for var in container"
-    """
-    pass
+"""
+   # pass
 
 def maxValTuple(theLst):
     """
