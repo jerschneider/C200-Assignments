@@ -105,6 +105,15 @@ def minValTuple(theLst):
    # pass
 
 def maxVal(theLst):
+    i = 0 
+    MaxVal = theLst[0]
+    while i < len(theLst):
+        if theLst[i] > MaxVal:
+            MaxVal = theLst[i]
+        i = i + 1 # this is the same as >>>> i += 1 
+    return MaxVal
+    
+    
     """
     Given a list, determine the maximum value in the list
 
@@ -114,7 +123,7 @@ def maxVal(theLst):
 
     Limitation: The only function you can use (if you want to) is `len()` and `range()`. Cannot use "in" besides "for var in container"
     """
-    pass
+   # pass
 
 def maxValIndex(theLst):
     """
