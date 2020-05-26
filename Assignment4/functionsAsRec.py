@@ -155,7 +155,7 @@ def lengthOfString(string):
 #im unsure wheather or not it should be coutning only the string characters because the name of the function suggests so
     if string == []:
         return 0
-    return 1 + lengthOfString( string [1:] )
+    return 1 + lengthOfString( rest(string) ) 
 
 """       
         type(first(string)) == str:
@@ -175,7 +175,21 @@ def removePos(x, cont):
 
     Example: removePos(1, ['a', 'b', 'c']) --> ['a', 'c']
     """
-    pass
+    #pass
+    if cont == []:
+        return cont
+    if cont[0] == x: #had to specify because the first(cont) and rest(cont) broke this specific code :^(
+        return cont[1:]
+    else:
+        return cont[:1] + removePos(cont[1:], x)
+
+#test code
+
+print(removePos( 1, [1, 2, 3, 4, 5, 6] ) )
+
+
+
+
 
 def sum2Dlist(mat):
     """
@@ -222,4 +236,18 @@ def fibonnaci(n):
     - It is extra credit, implementation is practice
     - Before the exam, understand the idea
     """
-    pass
+    #pass
+    if n < 0:
+        return n
+    else:
+        if n == 1:
+            return 0
+        else:
+            if n == 2:
+                return 1
+            else:
+                return fibonnaci(n - 1) + fibonnaci(n - 2)
+#test code
+
+print(fibonnaci( 13 ) ) # thus making n= 20 which should output 
+    
