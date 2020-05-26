@@ -81,16 +81,9 @@ def isPalindrome(string):
 
     Not allowed to use list / string iteration i.e. myList[::-1]
     """
-    pass
-"""
-    cont = len(string)
-    if ( cont == 0):
-        return True
-    if (string)
-"""
+    #pass
 
-"""
-    
+    #I did not know how to do this problem without using []/:/-1 list manipulation, unless i was allowed to use slice which we didnt learn til the day before its due
     if len(string) < 1: #this is the base-case
         return True
     else:
@@ -98,8 +91,9 @@ def isPalindrome(string):
             return isPalindrome( string[1 : -1 ] )
         else:
             return False
-"""    
-    
+
+
+
     
     
     
@@ -175,7 +169,7 @@ def removePos(x, cont):
     if cont[0] == x: #had to specify because the first(cont) and rest(cont) broke this specific code :^(
         return cont[1:]
     else:
-        return cont[:1] + removePos(cont[1:], x)
+        return cont[:1] + removePos(x, cont[1:])
 
 
 
