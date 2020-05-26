@@ -57,8 +57,6 @@ def first(nelos):
 def rest(nelos):
     return nelos[1:]
 
-#test code        
-print( myRemove(3 , [3, 1, 2, 5, 3, 3, 6]) ) # Expected [1, 2, 5, 6] as the x is defined as 3 and the function recursively removes all the 3's
 
 
 
@@ -75,8 +73,7 @@ def myReplace(old, new, cont):
     else:
         return [ cont[0] ] + myReplace(old, new, cont[1:] )
 
-#test code
-print( myReplace(4, 5, [0, 9, 8, 7, 6, 5, 4, 3, 2, 1] ) ) #replaces 4 with 5 
+
 
 def isPalindrome(string):
     """ 
@@ -84,7 +81,7 @@ def isPalindrome(string):
 
     Not allowed to use list / string iteration i.e. myList[::-1]
     """
-    #pass
+    pass
 """
     cont = len(string)
     if ( cont == 0):
@@ -139,8 +136,7 @@ def removeString(cont):
             return [ first(cont) ] + removeString(rest(cont)) 
 
 
-#test code
-print(removeString( ["boop", "boop", 3, 4, 4, 5, 4, 7, "beep", 9 ] ) )
+
 
     
 
@@ -164,8 +160,6 @@ def lengthOfString(string):
             return [ first(string) ] + lengthOfString(rest(string))
 """
 
-#test code
-print(lengthOfString( ["beep", 2, 3, 4, 5, 6, 7]  ))
 
 
 def removePos(x, cont):
@@ -182,12 +176,6 @@ def removePos(x, cont):
         return cont[1:]
     else:
         return cont[:1] + removePos(cont[1:], x)
-
-#test code
-
-print(removePos( 1, [1, 2, 3, 4, 5, 6] ) )
-
-
 
 
 
@@ -216,10 +204,6 @@ def sum2Dlist(mat):
     else: #mat is a list
         return sum2Dlist(first(mat)) + sum2Dlist(rest(mat))
         
-#testcode
-print( sum2Dlist( 4 ) ) # 4
-print( sum2Dlist( [ 1, 2, 3] ) ) # 6 >>> this function adds 1 + 2 + 3
-print( sum2Dlist( [ [1], [2], [3] ] ) ) # 6 because even though these are individual lists it still adds them together the same as if they were integers within one list
 
 
 def fibonnaci(n):
@@ -246,8 +230,4 @@ def fibonnaci(n):
             if n == 2:
                 return 1
             else:
-                return fibonnaci(n - 1) + fibonnaci(n - 2)
-#test code
-
-print(fibonnaci( 13 ) ) # thus making n= 20 which should output 
-    
+                return fibonnaci(n - 1) + fibonnaci(n - 2)    
