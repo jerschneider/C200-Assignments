@@ -33,8 +33,6 @@ if __name__ == "__main__":
 # all occurances of the first arguement (if any) are removed
 
 
-
-
 def myRemove(x, cont): #cont is probably going to be a container
     """
     Recursively remove every occurence of `x` in `cont` and return a list 
@@ -59,18 +57,8 @@ def first(nelos):
 def rest(nelos):
     return nelos[1:]
 
-
-
 #test code        
 print( myRemove(3 , [3, 1, 2, 5, 3, 3, 6]) ) # Expected [1, 2, 5, 6] as the x is defined as 3 and the function recursively removes all the 3's
-
-
-
-
-
-
-
-
 
 
 
@@ -79,7 +67,16 @@ def myReplace(old, new, cont):
     Recursively return a list of all contents of `cont` but any value that is 
     `old` is replaced with `new`
     """
-    pass
+    #pass
+    if cont == []:
+        return cont
+    elif cont[0] == old:
+        return [ new ] + myReplace(old, new, cont[1:] )
+    else:
+        return [ cont[0] ] + myReplace(old, new, cont[1:] )
+
+#test code
+print( myReplace(4, 5, [0, 9, 8, 7, 6, 5, 4, 3, 2, 1] ) ) #replaces 4 with 5 
 
 def isPalindrome(string):
     """ 
@@ -87,19 +84,74 @@ def isPalindrome(string):
 
     Not allowed to use list / string iteration i.e. myList[::-1]
     """
-    pass 
+    #pass
+"""
+    cont = len(string)
+    if ( cont == 0):
+        return True
+    if (string)
+"""
+
+"""
+    
+    if len(string) < 1: #this is the base-case
+        return True
+    else:
+        if string[0] == string[-1]:
+            return isPalindrome( string[1 : -1 ] )
+        else:
+            return False
+"""    
+    
+    
+    
+    
+    
+"""  
+    length = len(string)
+    if string == []:
+        return True 
+    else:
+        if string == first(string):
+            return isPalindrome(string - string())
+        else:
+            if [ first(string) != string(length - string -1) ]:
+                return False
+"""
+#print(isPalindrome( "aba" ) )  # madam  --- racecar
+#print(isPalindrome( "cat" ) )
+# to recursively do this
+    # chop up the problem
+    # first vs the last position
+    #second to the second to the last
 
 def removeString(cont):
     """
     Recursively returns the contents of list `cont`, not including any that are strings. 
     """
-    pass
+    #pass
+    if cont == []:
+        return cont
+    else:
+        if type(first(cont)) == str: 
+            return removeString(rest(cont))
+        else:
+            return [ first(cont) ] + removeString(rest(cont)) 
+
+
+#test code
+print(removeString( ["boop", "boop", 3, 4, 4, 5, 4, 7, "beep", 9 ] ) )
+
+    
+
+
 
 def lengthOfString(string):
     """
     Recursively returns the length of the cont
     """
-    pass
+    #pass
+
 
 def removePos(x, cont):
     """
