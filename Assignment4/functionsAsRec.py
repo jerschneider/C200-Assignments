@@ -7,8 +7,7 @@ Not allowed to use any built-in string or list methods
 Not allowed to use built-in max or min. 
 """
 
-#Notes for myself here
-
+#Notes for myself here --->this is from lecture8
 """
 def fib(n):
     if n == 0:
@@ -34,10 +33,9 @@ if __name__ == "__main__":
 # all occurances of the first arguement (if any) are removed
 
 
-#cont is probably going to be a container
 
 
-def myRemove(x, cont):
+def myRemove(x, cont): #cont is probably going to be a container
     """
     Recursively remove every occurence of `x` in `cont` and return a list 
     that has all the contents of `cont` that are not `x`
@@ -51,10 +49,28 @@ def myRemove(x, cont):
     else:
         #x...cont[0]...myRemove(x, cont[1:])...
         #mr german decribes this is as a promise ---> promise: result is x[1:] with x removed
-        if x == cont[0]:
-            return myRemove(x, cont[1:])
+        if x == first(cont): # x[1:] is the same as rest(x)
+            return myRemove(x, rest(cont))
         else:
-            return [ cont[0] ] + myRemove(x, cont[1:]) 
+            return [ first(cont) ] + myRemove(x, rest(cont)) 
+#for myRemove to work AS IS I need the following functions:
+def first(nelos):
+    return nelos[0]
+def rest(nelos):
+    return nelos[1:]
+
+
+
+#test code        
+print( myRemove(3 , [3, 1, 2, 5, 3, 3, 6]) ) # Expected [1, 2, 5, 6] as the x is defined as 3 and the function recursively removes all the 3's
+
+
+
+
+
+
+
+
 
 
 
@@ -104,8 +120,25 @@ def sum2Dlist(mat):
          [7, 8, 9]] ---> 45
     Returns an integer
     """
-    pass
-
+    #pass
+# A mat is one of the following:
+# -Number 
+# -[ListOf Mat]
+# 
+# Sum2DList : mat -> number
+#
+# purpose statement : inside the function in green
+    if (type(mat) == int): # determiens if what is inside the mat contianer is a number (aka an integer)
+            return mat
+    elif mat == []:
+        return 0
+    else: #mat is a list
+        return sum2Dlist(first(mat)) + sum2Dlist(rest(mat))
+        
+#testcode
+print( sum2Dlist( 4 ) ) # 4
+print( sum2Dlist( [ 1, 2, 3] ) ) # 6 >>> this function adds 1 + 2 + 3
+print( sum2Dlist( [ [1], [2], [3] ] ) ) # 6 because even though these are individual lists it still adds them together the same as if they were integers within one list
 
 
 def fibonnaci(n):
