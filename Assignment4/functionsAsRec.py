@@ -150,7 +150,22 @@ def lengthOfString(string):
     """
     Recursively returns the length of the cont
     """
-    #pass
+   #pass
+#this through recursion finds the length of the container, and its objects within in a list
+#im unsure wheather or not it should be coutning only the string characters because the name of the function suggests so
+    if string == []:
+        return 0
+    return 1 + lengthOfString( string [1:] )
+
+"""       
+        type(first(string)) == str:
+            return lengthOfString(len(first(string)))
+        else:
+            return [ first(string) ] + lengthOfString(rest(string))
+"""
+
+#test code
+print(lengthOfString( ["beep", 2, 3, 4, 5, 6, 7]  ))
 
 
 def removePos(x, cont):
