@@ -6,14 +6,15 @@ def letterFrequency(strng):
     each character present in the string occurred
     For example, the string "Hi, Larry" would yield the 
     dictionary {"H" : 1, "i" : 1, " ": 1, "L" : 1, "a" : 1, "r" : 2, "y": 1} # this is the key and the objects have to be unique, but not the value
-            ===================
-            each item is seperated by a comma in a dictionary
-            each key aka >>> H is assigned a value as indicated the colon, which in this is 1
-            each key has to be unique but not necessarily the value
-   
-   
-    (order of entries does not matter)
     '''
+#===========================================================================
+#            each item is seperated by a comma in a dictionary
+#            each key aka >>> H is assigned a value as indicated the colon, which in this is 1
+#            each key has to be unique but not necessarily the value
+#   
+#   
+#(order of entries does not matter)
+    
     freakOut = {} #this is my dictionary/intiliazes
     for i in strng: #iterates in each in the string
         if i in freakOut:# then this checks and sees if the letterw we are checking on is inside the dict or not
@@ -36,7 +37,7 @@ def primeList(n):
             return pList
     
     
-    
+#==================================================================================    
 """  
     for i in range(2, n + 1): #we're telling python to count from 2 to n+1
 # prime number % itself is always going to be 0, and the same with 1
