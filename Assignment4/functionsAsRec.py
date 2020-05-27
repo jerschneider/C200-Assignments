@@ -57,9 +57,6 @@ def first(nelos):
 def rest(nelos):
     return nelos[1:]
 
-
-
-
 def myReplace(old, new, cont):
     """
     Recursively return a list of all contents of `cont` but any value that is 
@@ -91,13 +88,6 @@ def isPalindrome(string):
             return isPalindrome( string[1 : -1 ] )
         else:
             return False
-
-
-
-    
-    
-    
-    
 """  
     length = len(string)
     if string == []:
@@ -128,13 +118,6 @@ def removeString(cont):
             return removeString(rest(cont))
         else:
             return [ first(cont) ] + removeString(rest(cont)) 
-
-
-
-
-    
-
-
 
 def lengthOfString(string):
     """
@@ -224,4 +207,4 @@ def fibonnaci(n):
             if n == 2:
                 return 1
             else:
-                return fibonnaci(n - 1) + fibonnaci(n - 2)    
+                return fibonnaci(n - 1) + fibonnaci(n - 2)

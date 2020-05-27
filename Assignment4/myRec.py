@@ -1,7 +1,9 @@
 # create the functions in myRec
-#use a loop and print out the first 10 values
+#REQUIRED TO USE a loop and print out the first 10 values
 #the test code must be writeen in the recTest.py
 def function1(n):
+    if n == 1:
+        return 1
     n = n
     for i in range (1, n) :
         return (n - 1 + n)
@@ -10,6 +12,9 @@ def function1(n):
 
 
 def closedFunct1(n):
+    if n == 1:
+        return 1
+    n = n
     n = n
     for i in range (1, n) :
         return (n * (1 + n)) / 2

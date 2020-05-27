@@ -16,7 +16,6 @@ def minVal(theLst):
     return MinVal
 
 
-
  if i < minVal:
             minVal = i
     return minVal    
@@ -33,4 +32,4 @@ if cont == []:
 
 
 
-print( "Actual >>> ", aSort( [4, 1, 5, 6, 6, 6, 6, 6, 6, 7, 8, 9, 0, 10, 12, 13, 14, 11] ), "Expected >>> [0, 1, 4, 5, 6, 6, 6, 6, 6, 6, 7, 8, 9, 10, 11, 12, 13, 14] "      )
+print( "Actual >>> ", aSort( [4, 1, 5, 6, 6, 6, 6, 6, 6, 7, 8, 9, 0, 10, 12, 13, 14, 11] ), "Expected >>> [0, 1, 4, 5, 6, 6, 6, 6, 6, 6, 7, 8, 9, 10, 11, 12, 13, 14] "  )
