@@ -1,3 +1,6 @@
+# REMEMBER TO ADD TEST CODE TO THESE
+#===============================
+
 def letterFrequency(strng):
     '''
     Given any string, return a dictionary containing the number of times 
@@ -28,5 +31,28 @@ def primeList(n):
     Return a list containing the first n Prime numbers
     '''
    #pass
+    pList = []
+    for i in range(2,10000000000000000):
+        for j in range(2, i):
+            if (i % j == 0):
+                break #exits you out of the current loop
+            else:
+                pList.append(i)
+        if len(pList) == n:
+            return pList
 
-   
+    
+    
+    
+"""  
+    for i in range(2, n + 1): #we're telling python to count from 2 to n+1
+# prime number % itself is always going to be 0, and the same with 1
+        if (i % (i + 1)) != 0:
+            #if (i % 1) == i:
+            primeList.append(i) #I decided to use append because we learned it today, what the function does is add varible(i) to the primeList
+    return primeList
+"""       
+        
+
+
+
