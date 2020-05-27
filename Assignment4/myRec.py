@@ -6,6 +6,7 @@ def function1(n):
     for i in range (1, n) :
         return (n - 1 + n)
         n = n - 1
+    return 0
 
 #TestCode
 print("")
@@ -20,14 +21,16 @@ print( function1 (5) )
 print( function1 (4) )
 print( function1 (3) )
 print( function1 (2) )
+print( function1 (1) )
 print("===END===")
 print ("")
 
 def closedFunct1(n):
     n = n
     for i in range (1, n) :
-        return (n * (1 + n)) // 2
+        return (n * (1 + n)) / 2
         n = n - 1
+    return 0
 
 print("")
 print("===closedFunct1===")
@@ -41,6 +44,7 @@ print( closedFunct1 (5) )
 print( closedFunct1 (4) )
 print( closedFunct1 (3) )
 print( closedFunct1 (2) )
+print( closedFunct1 (1) )
 print("===END===")
 print ("")
 
@@ -48,7 +52,7 @@ print ("")
 def funct2(n):
     n = n
     for i in range (1, n) :
-        return ( (n - 1) + 0.02 * (n -1))
+        return ( (n - 1) + 0.02 * (n - 1))
         n = n - 1
 
 print("")
@@ -69,10 +73,122 @@ print("===END===")
 print("")
 
 def closedFunc2(n):
+    
     n = n
     for i in range (1, n) :
         return (1.02)**n * 10000
         n = n - 1
+    return 10000
+
+print("")
+print("===closedFunc2===")
+print( closedFunc2 (13) )
+print( closedFunc2 (12) )
+print( closedFunc2 (11) )
+print( closedFunc2 (10))
+print( closedFunc2 (9) )
+print( closedFunc2 (8) )
+print( closedFunc2 (7) )
+print( closedFunc2 (6) )
+print( closedFunc2 (5) )
+print( closedFunc2 (4) )
+print( closedFunc2 (3) )
+print( closedFunc2 (2) )
+print( closedFunc2 (0) )
+print("===END===")
+print("")
+
+
+def func3(n):
+    if n == 2:
+        return 3
+    n = n
+    for i in range (1, n) :
+        if n >= 3:
+            return (n - 1) + (n -2)
+        n = n - 1
+    return 2
+print("")
+print("===func3===")
+print( func3 ( 10 ) )
+print( func3 (9) )
+print( func3 (8) )
+print( func3 (7) )
+print( func3 (6) )
+print( func3 (5) )
+print( func3 (4) )
+print( func3 ( 3 ) )
+print( func3 ( 2 ) )
+print( func3 ( 1 ) )
+print("===END===")
+print("")
+
+def func4(n):
+    if n == 1:
+        return 9
+    n = n
+    for i in range (1, n) :
+        return 9 * (n - 1) + (10 ** (n - 1)) - (n - 1)
+        n = n - 1
+
+print("")
+print("===func4===")
+print( func4 (10) )
+print( func4 (9) )
+print( func4 (8) )
+print( func4 (7) )
+print( func4 (6) )
+print( func4 (5) )
+print( func4 (4) )
+print( func4 ( 3 ) )
+print( func4 ( 2 ) )
+print( func4 ( 1 ) )
+print("===END===")
+print("")
+
+def func5(n):
+    if n == 0:
+        return 1
+    n = n
+    for i in range (1, n) :
+        return 3 * (n - 1) + 1
+        n = n - 1
+    return 3
+print("")
+print("===func5===")
+print( func5 (10) )
+print ( func5 (9))
+print ( func5 (8))
+print ( func5 (7))
+print ( func5 (6))
+print ( func5 (5))
+print ( func5 (4))
+print ( func5 (3))
+print ( func5 (2))
+print ( func5 (1))
+print ( func5 (0))
+
+def closedFunc5(n):
+    if n == 0:
+        return 1
+    n = n
+    for i in range (1, n) :
+        return ((3 ** (n+1)) -1) / 2
+        n = n - 1
+    return 2
+print("")
+print("===ClosedFunc5===")
+print( closedFunc5 (10) )
+print( closedFunc5 (9) )
+print( closedFunc5 (8) )
+print( closedFunc5 (7) )
+print( closedFunc5 (6) )
+print( closedFunc5 (5) )
+print( closedFunc5 (4) )
+print( closedFunc5 (3) )
+print( closedFunc5 (2) )
+print( closedFunc5 (1) )
+print( closedFunc5 (0) )
 
 
 
