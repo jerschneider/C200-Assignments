@@ -1,5 +1,23 @@
 import listAndDict as lad
 
+#======================================================
+#My Test code
+print("My Test code for letterFrequency")
+print("")
+print(" The past and present energies, which guide the tragic genre, find their roots in the Ancient Attican Tradition. :")
+print("\tExpected: {T': 2, 'h': 6, 'e': 13, ' ': 17, 'p': 2, 'a': 5, 's': 4, 't': 11, 'n': 10, 'd': 4, 'r': 7, 'g': 4, 'i': 11, ',': 2, 'w': 1, 'c': 4, 'u': 1, 'f': 1, 'o': 3, 'A': 2, '.': 1}")
+print("\tYour output:", lad.letterFrequency("The past and present energies, which guide the tragic genre, find their roots in the Ancient Attican Tradition."))
+print("")
+print("")
+print("My Test Code for primeList")
+print("n = 100:")
+print("\tExpected: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163, 167, 173, 179, 181, 191, 193, 197, 199, 211, 223, 227, 229, 233, 239, 241, 251, 257, 263, 269, 271, 277, 281, 283, 293, 307, 311, 313, 317, 331, 337, 347, 349, 353, 359, 367, 373, 379, 383, 389, 397, 401, 409, 419, 421, 431, 433, 439, 443, 449, 457, 461, 463, 467, 479, 487, 491, 499, 503, 509, 521, 523, 541]")
+print("\tYour output:", lad.primeList(100))
+print("")
+print("")
+print("======================================================")
+#======================================================
+# Given Test Code
 print("Testing letterFrequency:")
 print("aaaaaaaa:")
 print("\tExpected: {'a': 8}")

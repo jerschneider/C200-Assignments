@@ -15,7 +15,7 @@ def letterFrequency(strng):
 #   
 #(order of entries does not matter)
     
-    freakOut = {} #this is my dictionary/intiliazes
+    freakOut = {} #this is my dictionary and it is being >>> intiliazed
     for i in strng: #iterates in each in the string
         if i in freakOut:# then this checks and sees if the letterw we are checking on is inside the dict or not
             freakOut[i] += 1 # += is shorthand for freakOut[i] = freakOut[i] + 1
@@ -32,7 +32,7 @@ def primeList(n):
             if (i % j == 0): #this checks if i % j is equals to 0 AND if runs into any instance where it does the condition breaks
                 break #exits you out of the current loop
         else: #Otherwise >>> this then appends it to the list
-            pList.append(i)
+            pList.append(i) # I decided to use append because we learned it today, what the function does is add varible(i) to the primeList
         if len(pList) == n: #we are then making sure our list has the desired amount of prime numbers which is dictated by the inputs in the n varibale of the function
             return pList
     
