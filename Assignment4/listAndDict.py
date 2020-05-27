@@ -1,6 +1,5 @@
 # REMEMBER TO ADD TEST CODE TO THESE
 #===============================
-
 def letterFrequency(strng):
     '''
     Given any string, return a dictionary containing the number of times 
@@ -25,22 +24,16 @@ def letterFrequency(strng):
 
 
 
-
 def primeList(n):
-    '''
-    Return a list containing the first n Prime numbers
-    '''
-   #pass
     pList = []
-    for i in range(2,10000000000000000):
-        for j in range(2, i):
-            if (i % j == 0):
+    for i in range(2,10000000): #I set range  2, 10000000 BECAUSE this loop will iterate between these two variables, I could probably do this another way but this works
+        for j in range(2, i): #this nested for loop iterates through every number between (2 and i)
+            if (i % j == 0): #this checks if i % j is equals to 0 AND if runs into any instance where it does the condition breaks
                 break #exits you out of the current loop
-            else:
-                pList.append(i)
-        if len(pList) == n:
+        else: #Otherwise >>> this then appends it to the list
+            pList.append(i)
+        if len(pList) == n: #we are then making sure our list has the desired amount of prime numbers which is dictated by the inputs in the n varibale of the function
             return pList
-
     
     
     
