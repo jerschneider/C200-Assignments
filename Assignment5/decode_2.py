@@ -10,14 +10,13 @@ pointing to something that helps
 """
 ASCII_VALUES[9] = "\t" # Tab Character
 ASCII_VALUES[10] = "\n" # New Line Character
-ASCII_VALUES[7] = "a"
 
 
 
 def read_file(file_name):
     """
     INPUT: a file name
-    OUTPUT: A list of strings (not a single string) where each string is  #does this mean '1' because that's what i'm assuming
+    OUTPUT: A list of strings (not a single string) where each string is 
     a number
 
     Hint
@@ -28,13 +27,8 @@ def read_file(file_name):
     4. Return its contents
     """
     # TODO: complete the function
-    #pass
-    with open(file_name) as openFile: 
-        lines = []
-        for line in openFile:
-            lines.append(line)
-    openFile.close()
-    return lines
+    pass
+
 
 def convert(list_of_codes):
     """
@@ -44,17 +38,7 @@ def convert(list_of_codes):
     """
     # TODO: convert message using dictionary above (ASCII_VALUES)
     #       If you are unsure about the dictionary, try printing it
-    #pass
-    nMessages = []
-    for line in list_of_codes:
-        lineMessage = []
-        for num in line:
-            value = ASCII_VALUES[num]
-            lineMessage.append(value)
-        nMessages.append(lineMessage)
-    print(nMessages)
-    
-
+    pass
 
 
 def write_file(file_name, message):
@@ -77,7 +61,7 @@ def extraCredit(something):
     Have the message signed with your name instead of 
     what is the last line of the file.
 
-    Remember, it is a string, so it is immutable.
+    Remember, it is a string, so it is immutable. 
     """
 
 
