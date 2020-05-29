@@ -213,50 +213,60 @@ def main():
     print("TODO: Here is where tests will be written")
     print("Test output for function: myRemoveList")
     # TODO
-    print(myRemoveList(3, [1, 2, 3,] ) )
+    print("Actual >>>", myRemoveList(3, [1, 2, 3,] ), "Expected >>> [1, 2]" )
     #print(myRemoveList(6, []))
     #print(myRemoveList(1, [1, 2, 3]))
-    print(myRemoveList(6, [6, 6, 6] ))
+    print("Actual >>>", myRemoveList(6, [6, 6, 6] ), "Expected >>> [1, 2]" )
     
     print("Test output for function: myRemoveString")
     # TODO
     print("")
-    print("myRemoveString")
-    print(myRemoveString ( "p", "boop" )  )
+    print("Actual >>>", myRemoveString ( "p", "boop" ), "Expected >>> boo"  )
+    print("Actual >>>", myRemoveString ( "p", "moop" ), "Expected >>> moo"  )
     print("")
+    
     print("Test output for function: myInsertList")
     # TODO
     print("")
     print ("myInsertList")
-    print(myInsertList (4, 2, [1, 2, 3, 4, 5, 6, 7]))
+    print(myInsertList (4, 2, [1, 2, 3, 4, 5, 6, 7]), "Expected >> [1, 2, 3, 4, 2, 5, 6, 7] ")
+    print(myInsertList (1, 3, [1, 2, 3, 4, 5, 6, 7]), "Expected >> [1, 3, 2, 3, 4, 5, 6, 7]" )
+
     print("Test output for function: myReplaceString")
     # TODO
-    print(myReplaceString( "p", "o", "beep" ) )
+    print(myReplaceString( "p", "o", "beep" ), "Expected >>> beeo" )
+    print(myReplaceString( "p", "o", "meep" ), "Expected >>> meeo" )
 
     print("Test output for function: removePosList")
     # TODO
     print("")
-    print(removePosList(1, ['m', 'b', 'c', 'd'] ) )
+    print(removePosList(1, ['m', 'b', 'c', 'd'] ), "Expected >> ['m', 'c', 'd'] " )
+    print(removePosList(2, ['m', 'b', 'c', 'd'] ), "Expected >> ['m', 'b', 'd'] " )
     print("")
     print("Test output for function: minList")
     # TODO
-    print(minList( [1, 3, 4, 5, 6, 7, 8, 8, 9]))
+    print(minList( [1, 3, 4, 5, 6, 7, 8, 8, 9]), "Expected >> 1 ")
+    print(minList( [90, 3, 4, 5, 6, 7, 8, 8, 9]), "Expected >> 3 ")
+
 
     print("Test output for function: maxList")
     # TODO
-    print(maxList ([1, 2, 3, 4, 5, 66, 7]))
+    print(maxList ([1, 2, 3, 4, 5, 66, 7]), "Expected >> 66" )
+    print(maxList ([1, 2, 3, 4, 5, 900, 7]), "Expected >> 900" )
 
     print("Test output for function: minIndex")
     # TODO
-    print( minIndex ([1, 2, 3, 4, 55, 6, 7, 0] ) )
+    print( minIndex ([1, 2, 3, 4, 55, 6, 7, 0] ), "Expected >> 7" )
+    print( minIndex ([1, 2, 3, 4, 55, 6, 7] ), "Expected >> 0" )
 
     print("Test output for function: maxIndex")
     # TODO
-    print( maxIndex ( [1, 2, 3, 4, 5, 6, 7, 8 ]))
-
+    print( maxIndex ( [1, 2, 3, 4, 5, 6, 7, 8 ]), "Expected >> 7" )
+    print( maxIndex ( [1, 2, 3, 4, 5, 6, 7]), "Expected >> 6" )
     print("Test output for function: getIndex")
     # TODO
-    print(getIndex ('b', 'oob' ))
+    print(getIndex ('b', 'oob' ), "Expected >> 2")
+    print(getIndex ('m', 'moo' ), "Expected >> 0")
 
     print("Test output for function: areEqual")
     #TODO
