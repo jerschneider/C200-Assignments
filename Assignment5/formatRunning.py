@@ -1,8 +1,8 @@
 string1 = "{0} - {1}" # TODO: Complete this string to use format
 string2 = "{0:>10}" # TODO: Complete this string to use format
-string3 = "00.{0:<4}.00" # TODO: Complete this string to use format
-string4 = "" # TODO: Complete this string to use format
-string5 = "" # TODO: Complete this string to use format
+string3 = "00{:4.2f}" # TODO: Complete this string to use format   """ have four positions total and 2 after the decimal is what this format does"
+string4 = "Does {0} == {1} ? -> {2}" # TODO: Complete this string to use format
+string5 = "{:~^10s}" # TODO: Complete this string to use format """ this one kakes sure to check if the string is at 10 lengths, and the tidle is a place holder,and the ^ is going to center any of the text which is inputted. "
 
 
 # NOTE: Do not modify anything below this line

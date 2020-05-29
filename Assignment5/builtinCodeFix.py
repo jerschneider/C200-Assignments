@@ -27,10 +27,7 @@ def myRemoveList(x, lst):
     return handlesValueIssue(lst.copy())
 
 
-print(myRemoveList(3, [1, 2, 3,] ) )
-#print(myRemoveList(6, []))
-#print(myRemoveList(1, [1, 2, 3]))
-print(myRemoveList(6, [6, 6, 6] ))
+
 
 
 
@@ -50,10 +47,7 @@ def myRemoveString(x, string):
     newString = string.replace("x", "")
     return newString
 """
-print("")
-print("myRemoveString")
-print(myRemoveString ( "p", "boop" )  )
-print("")
+
 
 
 def myInsertList(new, place, cont):
@@ -85,9 +79,7 @@ nList = copyOfList[]
        nList[place] = new
        return nList
 """
-print("")
-print ("myInsertList")
-print(myInsertList (4, 2, [1, 2, 3, 4, 5, 6, 7]))
+
 
 
 
@@ -113,9 +105,6 @@ def myReplaceString(old, new, cont):
     return nCont
 """
 
-print("myReplaceString")
-print(myReplaceString( "p", "o", "beep" ) )
-
 
 
 def removePosList(x, cont):
@@ -139,9 +128,7 @@ def removePosList(x, cont):
     # Do not modify this line
     return handlesValueIssue(cont.copy())
 
-print("")
-print(removePosList(1, ['m', 'b', 'c', 'd'] ) )
-print("")
+
 
 
 def minList(lst):
@@ -150,7 +137,6 @@ def minList(lst):
     """
     #pass
     return min(lst)
-print(minList( [1, 3, 4, 5, 6, 7, 8, 8, 9]))
 
 def maxList(lst):
     """
@@ -158,7 +144,6 @@ def maxList(lst):
     """
     #pass
     return max(lst)
-print(maxList ([1, 2, 3, 4, 5, 66, 7]))
 
 def minIndex(lst):
     """
@@ -169,7 +154,6 @@ def minIndex(lst):
     #pass
     return lst.index(min(lst))
 
-print( minIndex ([1, 2, 3, 4, 55, 6, 7, 0] ) )
 
 def maxIndex(lst):
     """
@@ -179,7 +163,6 @@ def maxIndex(lst):
     """
     #pass
     return lst.index(max(lst))
-print( maxIndex ( [1, 2, 3, 4, 5, 6, 7, 8 ]))
 
 
 def getIndex(char, strng):
@@ -193,7 +176,6 @@ def getIndex(char, strng):
     #pass
     return strng.index(char)
 
-print(getIndex ('b', 'oob' ))
 
 
 
@@ -211,7 +193,6 @@ def areEqual(str1, str2):
         return True
     else:
         return False
-print( areEqual ("cat", "cat")) 
 
 def main():
     """
@@ -232,37 +213,56 @@ def main():
     print("TODO: Here is where tests will be written")
     print("Test output for function: myRemoveList")
     # TODO
+    print(myRemoveList(3, [1, 2, 3,] ) )
+    #print(myRemoveList(6, []))
+    #print(myRemoveList(1, [1, 2, 3]))
+    print(myRemoveList(6, [6, 6, 6] ))
     
     print("Test output for function: myRemoveString")
     # TODO
-    
+    print("")
+    print("myRemoveString")
+    print(myRemoveString ( "p", "boop" )  )
+    print("")
     print("Test output for function: myInsertList")
     # TODO
-    
+    print("")
+    print ("myInsertList")
+    print(myInsertList (4, 2, [1, 2, 3, 4, 5, 6, 7]))
     print("Test output for function: myReplaceString")
     # TODO
-    
+    print(myReplaceString( "p", "o", "beep" ) )
+
     print("Test output for function: removePosList")
     # TODO
-    
+    print("")
+    print(removePosList(1, ['m', 'b', 'c', 'd'] ) )
+    print("")
     print("Test output for function: minList")
     # TODO
-    
+    print(minList( [1, 3, 4, 5, 6, 7, 8, 8, 9]))
+
     print("Test output for function: maxList")
     # TODO
-    
+    print(maxList ([1, 2, 3, 4, 5, 66, 7]))
+
     print("Test output for function: minIndex")
     # TODO
-    
+    print( minIndex ([1, 2, 3, 4, 55, 6, 7, 0] ) )
+
     print("Test output for function: maxIndex")
     # TODO
-    
+    print( maxIndex ( [1, 2, 3, 4, 5, 6, 7, 8 ]))
+
     print("Test output for function: getIndex")
     # TODO
-    
+    print(getIndex ('b', 'oob' ))
+
     print("Test output for function: areEqual")
     #TODO
-    print( areEqual ("cat", "cat")) 
+    print( areEqual ("cat", "cat"))
+    print( areEqual ("cat", "bat"))
+
 
 
 
