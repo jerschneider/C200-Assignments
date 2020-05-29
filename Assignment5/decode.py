@@ -1,3 +1,10 @@
+#I COMPLETED THIS SEVERAL HOURS PAST DUE
+#THIS IS A NOTE TO REMIND MYSLEF TO LET LARRY KNOW THAT I COMPLETED IT PAST DUE
+
+
+
+
+
 # DO NOT MODIFY THE FOLLOWING DICTIONARY
 ASCII_VALUES = {i: chr(i) for i in range(32, 126)}
 """
@@ -93,6 +100,12 @@ def extraCredit(something):
 
     Remember, it is a string, so it is immutable.
     """
+    with open(something, "rt") as file:
+        with open("Assignment5/message.txt", "at") as file2:
+            for line in file:
+                file2.write(line.replace("Camisa", "Jeremy"))
+    file.close()
+    file2.close()
 
 
 
@@ -103,6 +116,12 @@ if __name__ == "__main__":
     message = convert(file_content)
 
     write_file("Assignment5/message.txt", message) # Do not change the path
+
+    #Extra Credit path
+    extraCredit("Assignment5/message.txt")
+
+
+
 
     # Extra Credit:
     # Sign the message with your name instead of Camisa ()

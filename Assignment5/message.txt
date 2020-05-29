@@ -8,4 +8,14 @@ Hello Student,
     Don't forget to commit and push.
 
 Sincerely,
-Camisa
+CamisaHello Student,
+
+    Congratulations!
+    If you can read this, with no problem, you have successfully completed
+    the decoding problem in the Summer Session of CSCI-C 200: Intro to Computers & Programming.
+
+    Just a reminder, this assignment is due on Friday, May 29th, 2020.
+    Don't forget to commit and push.
+
+Sincerely,
+Jeremy
