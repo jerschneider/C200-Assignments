@@ -28,13 +28,15 @@ def read_file(file_name):
     4. Return its contents
     """
     # TODO: complete the function
-    #pass
+    #pass 
     with open(file_name) as openFile: 
         lines = []
         for line in openFile:
             lines.append(line)
     openFile.close()
     return lines
+
+
 
 def convert(list_of_codes):
     """
@@ -45,6 +47,15 @@ def convert(list_of_codes):
     # TODO: convert message using dictionary above (ASCII_VALUES)
     #       If you are unsure about the dictionary, try printing it
     #pass
+    message = []
+    for item in list_of_codes:
+        for num in item.split():
+            values = ASCII_VALUES.get(int(num))
+            message.append(values)
+    return ("".join(message))
+    
+    
+"""    
     nMessages = []
     for line in list_of_codes:
         lineMessage = []
@@ -53,7 +64,7 @@ def convert(list_of_codes):
             lineMessage.append(value)
         nMessages.append(lineMessage)
     print(nMessages)
-    
+"""    
 
 
 
@@ -65,7 +76,10 @@ def write_file(file_name, message):
     Does not need to explicitly return anything. 
     """
     # TODO: write to the new file
-    pass
+    #pass
+    f = open(file_name, "w")
+    f.write(message)
+    f.close()
 
 
 def extraCredit(something):
