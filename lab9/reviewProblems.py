@@ -69,6 +69,32 @@ print("Problem 6: longestString")
 print( longestString( ["shakespeare", "dog", "auster", "the wasteland", "safran"]))
 print("")
 
+#problem 10
+#
+def sort(lon):
+    while not isItSorted(lon):
+        for index in range(len(lon) -1 ):
+            if lon[index] < lon[index + 1]:
+                (lon[index], b) = (lon[index +1], a) 
+    
+    
+    def isItSorted(lon):
+        sorted = True
+        for index in range(len(lon) -1):
+            if lon[index] < lon[index + 1]: # wrong
+            sorted = False
+        return sorted
+    #sorted = isItSorted(lon)
+
+    while not isItSorted(lon):
+        for index in range(len(lon)):
+
+
+print(isItSorted( [4, 3, 2, 2, 1] ) )
+print("")
+
+
+
 
 #problem 11
 #ascending order
@@ -97,13 +123,34 @@ print("")
 
 #problem 12
 #sum of two matrixes
+def sumOfMatrices(a, b):
+    print("adding ", a, "to ", b)
+    rows = len(a)
+    columns = len(a[0])
+    result = []
+    for row in range(rows):
+        myRow = []
+        for column in range(columns):
+            myRow = myRow + [ 0 ]
+            print("--->", myRow)
+        result = result + [ myRow ]
+        print("matrix grows ", result)
+    for row in range(rows):
+        for column in range(columns):
+            result[row][column] = a[row][column] + b[row][column]
+            print("addition in progress: ", result)
+    return result
 
-
-
+"""    
+    for row in range(rows):
+        sum = 0
+        
+        result[row][column] = sum
+"""
 
 print("")
 print("Problem 12: sumOfMatrices")
-
+print(sumOfMatrices( [[1, 2], [3, 4]], [[5, 6], [-3, 7]] ) )
 print("")
 
 #problem 13
@@ -151,4 +198,22 @@ print("")
 print("Problem 16: listIntersection")
 print( intersection ([], [] ) )
 print( intersection ([5, 1, 2], [2, 3, 5] ) ) # intersection is [2] between these two lists
+print("")
+
+#problem 17
+
+
+#problem 18
+#write  a function to calculate the difference of two sets represetned as lists
+
+def differenceOfSets(a, b):
+    result = []
+    for elem in a:
+        if elem not in b:
+            result = result = [ elem ]
+    return result
+print("")
+print("Problem 18: ")
+print(differenceOfSets( [], [1, 2] ) )
+print(differenceOfSets( [1, 3, 4], [1, 2, 3]  ) )
 print("")
