@@ -34,8 +34,16 @@ print(vowelsRemove("Eagleton wrote the best introduction to any work concering t
 print("")
 
 #problem 3
+# average of a list of numbers
 #
-#
+def averageLON(lon):
+    sum = 0
+    for elem in lon:
+        sum += elem
+    return sum / len(lon)
+print("")
+print("Problem 3: averageLON")
+print(averageLON([1, 2, 3, 9, 9, 9, 8, 7, 6 ,5, 4, 6, 5]))
 
 #problem 4
 #a function that throws a dice n times and returns  a hisogram as a dictionary
@@ -54,6 +62,19 @@ print("Problem 4: Dictionary/Histogram of dice rolls ")
 print(histogram)
 
 #problem 5
+# reverse: String >>> String
+def reverse(sentence):
+    result = ""
+    for letter in sentence:
+        result = result + letter
+    return result
+
+
+    return result
+print("")
+print("Problem 5: reverse string")
+print(reverse(""))
+print(reverse("what's up"))
 
 #problem 6
 #a function that returns the longest string in a list of strings
@@ -69,27 +90,27 @@ print("Problem 6: longestString")
 print( longestString( ["shakespeare", "dog", "auster", "the wasteland", "safran"]))
 print("")
 
+#problem 7
+# 
+
 #problem 10
-#
+# sort in descending in order
 def sort(lon):
     while not isItSorted(lon):
         for index in range(len(lon) -1 ):
             if lon[index] < lon[index + 1]:
-                (lon[index], b) = (lon[index +1], a) 
+                (lon[index], b) = (lon[index +1], lon[index] )
     
-    
-    def isItSorted(lon):
-        sorted = True
-        for index in range(len(lon) -1):
-            if lon[index] < lon[index + 1]: # wrong
+def isItSorted(lon):
+    sorted = True
+    for index in range(len(lon) -1):
+        if lon[index] < lon[index + 1]: # wrong
             sorted = False
-        return sorted
+        
+    return sorted
     #sorted = isItSorted(lon)
 
-    while not isItSorted(lon):
-        for index in range(len(lon)):
-
-
+print("Problem 10: isItSorted")
 print(isItSorted( [4, 3, 2, 2, 1] ) )
 print("")
 
@@ -154,12 +175,33 @@ print(sumOfMatrices( [[1, 2], [3, 4]], [[5, 6], [-3, 7]] ) )
 print("")
 
 #problem 13
+# [ListOf Number] [ListOf Number] >>>> Bumber
+def dot(a,b):
+    sum = 0
+    for index in range(len(a)):
+        sum = sum + a[index] * b[index]
+    return sum
 
-
+print("")
+print("Problem 13: dot product of two vectors")
+print(dot([1, 2, 3], [3, -2, -1]))
 
 
 #problem 14
+#alternate
+#[listOf Number] >>> Number
+def alternate(lon):
+    sum = 0
+    sign = 1
+    for elem in lon:
+        sum = sum + sign * elem
+        sign = sign * (-1)
+    return elem 
 
+
+print("")
+print("Problem 14: alternate a LON")
+print(alternate([1, 2, 3, 4, 5]) )
 
 
 #problem 15
@@ -201,6 +243,23 @@ print( intersection ([5, 1, 2], [2, 3, 5] ) ) # intersection is [2] between thes
 print("")
 
 #problem 17
+#all elemens in one or the other
+def union(a, b):
+    result = []
+    for elem in a:
+        result = result + [ elem ]
+    for elem in b:
+        if elem in result:
+            pass
+        else:
+            result = result + [ elem ]
+    return result
+
+print("")
+print("Problem 17: union of elements in lists")
+print(union([1, 2, 3], [2, 3, 4]))
+
+
 
 
 #problem 18
@@ -213,7 +272,7 @@ def differenceOfSets(a, b):
             result = result = [ elem ]
     return result
 print("")
-print("Problem 18: ")
+print("Problem 18: differenceOfSets ")
 print(differenceOfSets( [], [1, 2] ) )
 print(differenceOfSets( [1, 3, 4], [1, 2, 3]  ) )
 print("")
