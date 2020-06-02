@@ -3,7 +3,8 @@ class Horse:
         self.name = name
     def talk(self):
         print("hello!!! i am a horse :^)")
-
+class unicorn(Horse):
+    def __init__
 a = Horse("Seabiscuit")
 b = Horse("Milo")
 
