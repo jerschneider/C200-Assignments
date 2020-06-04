@@ -1,0 +1,144 @@
+
+==== People != 5500 Units ====
+============ End =============
+
+
+=== Blood Banks and Counts ===
+Bank: Red Cross,Users: 20,Blood Total: 1900
+	 Type A+ : Amount 190
+	 Type O+ : Amount 50
+	 Type B+ : Amount 0
+	 Type AB+: Amount 570
+	 Type A- : Amount 470
+	 Type O- : Amount 550
+	 Type B- : Amount 70
+	 Type AB-: Amount 0
+Bank: St. Blood,Users: 20,Blood Total: 1900
+	 Type A+ : Amount 170
+	 Type O+ : Amount 250
+	 Type B+ : Amount 260
+	 Type AB+: Amount 250
+	 Type A- : Amount 160
+	 Type O- : Amount 160
+	 Type B- : Amount 380
+	 Type AB-: Amount 270
+Bank: Not Vampires,Users: 20,Blood Total: 1900
+	 Type A+ : Amount 750
+	 Type O+ : Amount 390
+	 Type B+ : Amount 240
+	 Type AB+: Amount 180
+	 Type A- : Amount 70
+	 Type O- : Amount 0
+	 Type B- : Amount 270
+	 Type AB-: Amount 0
+Bank: Indiana University,Users: 20,Blood Total: 1900
+	 Type A+ : Amount 380
+	 Type O+ : Amount 10
+	 Type B+ : Amount 70
+	 Type AB+: Amount 150
+	 Type A- : Amount 450
+	 Type O- : Amount 200
+	 Type B- : Amount 160
+	 Type AB-: Amount 480
+Bank: Drop it Like it's Hot,Users: 20,Blood Total: 1900
+	 Type A+ : Amount 120
+	 Type O+ : Amount 10
+	 Type B+ : Amount 70
+	 Type AB+: Amount 330
+	 Type A- : Amount 130
+	 Type O- : Amount 570
+	 Type B- : Amount 420
+	 Type AB-: Amount 250
+============ End =============
+
+======People that can donate to A+======
+Count: 13, List: [< Caleb Hubbard ~ O- ~ 5500ml >, < Odysseus Valenzuela ~ A- ~ 5500ml >, < Nolan Leon ~ A- ~ 5500ml >, < Addison Mccarty ~ A- ~ 5500ml >, < Ferris Howe ~ O+ ~ 5500ml >, < Lee Perry ~ O- ~ 5500ml >, < Igor Reeves ~ A- ~ 5500ml >, < Keefe Parrish ~ A- ~ 5500ml >, < Fritz Knight ~ O- ~ 5500ml >, < Cameron Cochran ~ O- ~ 5500ml >, < Wyatt Chase ~ A- ~ 5500ml >, < Xander Harris ~ O- ~ 5500ml >, < Baker Rosario ~ A+ ~ 5500ml >]
+Count: 8, List: [< Cadman Morgan ~ A+ ~ 5500ml >, < Vincent Garner ~ O+ ~ 5500ml >, < Neil Abbott ~ A- ~ 5500ml >, < Berk Byers ~ O+ ~ 5500ml >, < Ralph Mercer ~ A- ~ 5500ml >, < Alexander Jacobson ~ O+ ~ 5500ml >, < Kuame Mccarthy ~ O- ~ 5500ml >, < Micah Cantrell ~ A+ ~ 5500ml >]
+Count: 13, List: [< Curran Lowe ~ A+ ~ 5500ml >, < Lawrence Mcneil ~ A- ~ 5500ml >, < Shad Bates ~ A+ ~ 5500ml >, < Porter Orr ~ O+ ~ 5500ml >, < Arsenio Webb ~ A- ~ 5500ml >, < Quentin Berger ~ O+ ~ 5500ml >, < Kibo Bullock ~ A+ ~ 5500ml >, < Isaac Townsend ~ O+ ~ 5500ml >, < Carter Patel ~ A+ ~ 5500ml >, < Norman Herring ~ A+ ~ 5500ml >, < Nigel Harrington ~ O+ ~ 5500ml >, < Steel Hutchinson ~ A+ ~ 5500ml >, < Wallace Dunlap ~ A+ ~ 5500ml >]
+Count: 12, List: [< Samuel Sims ~ O+ ~ 5500ml >, < Ali Aguirre ~ O+ ~ 5500ml >, < Grady Rush ~ A+ ~ 5500ml >, < Victor Mills ~ A+ ~ 5500ml >, < Felix Lindsay ~ A- ~ 5500ml >, < Silas Burris ~ O- ~ 5500ml >, < Rigel Dunlap ~ A- ~ 5500ml >, < Dylan Carver ~ O- ~ 5500ml >, < Beck Stein ~ A- ~ 5500ml >, < Jack Diaz ~ A+ ~ 5500ml >, < Zeph Giles ~ A- ~ 5500ml >, < Lars Boone ~ A+ ~ 5500ml >]
+Count: 8, List: [< Adrian Koch ~ A+ ~ 5500ml >, < Griffith Hebert ~ O+ ~ 5500ml >, < Quentin Frazier ~ O- ~ 5500ml >, < Fritz Finch ~ A+ ~ 5500ml >, < Chaim Dillon ~ A- ~ 5500ml >, < Keefe Michael ~ O- ~ 5500ml >, < Carter Anthony ~ O- ~ 5500ml >, < Joel Forbes ~ O- ~ 5500ml >]
+========================================
+
+========= Is Injured =========
+============ End =============
+
+
+========= Is Injured =========
+Caleb Hubbard ~ 45 days, 6:50:02.129113 ~ O- ~ 5150ml	5150
+Xenos Beach ~ 38 days, 11:18:18.567469 ~ B+ ~ 5010ml	5010
+Porter Orr ~ 48 days, 12:21:25.964732 ~ O+ ~ 4980ml	4980
+Ralph Mercer ~ 31 days, 15:42:38.293499 ~ A- ~ 4640ml	4640
+Sean Moreno ~ 28 days, 16:02:21.855143 ~ AB- ~ 4220ml	4220
+============ End =============
+
+===========Checking Transfer============
+Current Person: Caleb Hubbard
+Unable to take blood: 'Caleb Hubbard' is injured
+'Caleb Hubbard' (5250) Status of Injury: False
+
+Current Person: Ralph Mercer
+Unable to take blood: 'Ralph Mercer' is injured
+'Ralph Mercer' (4740) Status of Injury: True
+
+Current Person: Porter Orr
+Unable to take blood: 'Porter Orr' is injured
+'Porter Orr' (5080) Status of Injury: True
+
+Current Person: Sean Moreno
+Unable to take blood: 'Sean Moreno' is injured
+'Sean Moreno' (4320) Status of Injury: True
+
+Current Person: Xenos Beach
+Unable to take blood: 'Xenos Beach' is injured
+Unable to transfer blood to Xenos Beach: 'Drop it Like it's Hot' does not have enough of type B+ (70)
+'Xenos Beach' (5010) Status of Injury: True
+
+========================================
+
+=== Blood Banks and Counts ===
+Bank: Red Cross,Users: 20,Blood Total: 1800
+	 Type A+ : Amount 190
+	 Type O+ : Amount 50
+	 Type B+ : Amount 0
+	 Type AB+: Amount 570
+	 Type A- : Amount 470
+	 Type O- : Amount 450
+	 Type B- : Amount 70
+	 Type AB-: Amount 0
+Bank: St. Blood,Users: 20,Blood Total: 1800
+	 Type A+ : Amount 170
+	 Type O+ : Amount 250
+	 Type B+ : Amount 260
+	 Type AB+: Amount 250
+	 Type A- : Amount 60
+	 Type O- : Amount 160
+	 Type B- : Amount 380
+	 Type AB-: Amount 270
+Bank: Not Vampires,Users: 20,Blood Total: 1800
+	 Type A+ : Amount 750
+	 Type O+ : Amount 290
+	 Type B+ : Amount 240
+	 Type AB+: Amount 180
+	 Type A- : Amount 70
+	 Type O- : Amount 0
+	 Type B- : Amount 270
+	 Type AB-: Amount 0
+Bank: Indiana University,Users: 20,Blood Total: 1800
+	 Type A+ : Amount 380
+	 Type O+ : Amount 10
+	 Type B+ : Amount 70
+	 Type AB+: Amount 150
+	 Type A- : Amount 450
+	 Type O- : Amount 200
+	 Type B- : Amount 160
+	 Type AB-: Amount 380
+Bank: Drop it Like it's Hot,Users: 20,Blood Total: 1900
+	 Type A+ : Amount 120
+	 Type O+ : Amount 10
+	 Type B+ : Amount 70
+	 Type AB+: Amount 330
+	 Type A- : Amount 130
+	 Type O- : Amount 570
+	 Type B- : Amount 420
+	 Type AB-: Amount 250
+============ End =============
