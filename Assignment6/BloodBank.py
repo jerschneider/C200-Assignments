@@ -2,10 +2,10 @@ class BloodBank:
 
     # https://www.disabled-world.com/calculators-charts/blood-chart.php
     # Dontate Blood To table
-    DONATE_TO = { 
+    DONATE_TO = { 'A+':['A+', 'AB+'], 'O+':['O+', 'A+', 'B+', 'AB+'], 'B+':['B+', 'AB+'], 'AB+':['AB+'], 'A-':['A+', 'A-', 'AB+', 'AB-'], 'O-':['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'], 'B-':['B+', 'B-', 'AB+', 'AB-'], 'AB-':['AB+', 'AB-'] 
     } # TODO: FILL IN based on table about compatability 
 
-    DONATE_FROM = {
+    DONATE_FROM = { 'A+':['A+', 'A-', 'O+', 'O-'], 'O+':['O+', 'O-'], 'B+':['B+', 'B-', 'O+', 'O-'], 'AB+':['A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-'], 'A-':['A-', 'O-'], 'O-':['O-'], 'B-':['B-', 'O-'], 'AB-':['AB-', 'A-', 'B-', 'O-']
     } # TODO: FILL IN based on table about compatability 
 
 
