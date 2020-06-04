@@ -21,7 +21,8 @@ def listOfPeople(loc):
             address = stringList[2]
             birthday = stringList[4]
             bloodType = stringList[6]   
-            personList.append(Person(name, address, birthday, bloodType)) 
+            if name != "Name":
+                personList.append(Person(name, address, birthday, bloodType)) 
     openFile.close()
     return personList
     

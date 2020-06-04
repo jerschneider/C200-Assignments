@@ -29,7 +29,7 @@ class Person():
         """
         self.name = name
         self.address = address
-        self.birthday = birthday
+        self.birthday = datetime.strptime(birthday, "%m-%d-%Y")
         self.bloodType = bloodType
         self.bloodInBody = 5500
 
@@ -43,6 +43,8 @@ class Person():
         """
         #pass # TODO: Implement this
         #return currentTime - self.birthday
+        today = date.today()
+        return today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
 
     
     def isInjured(self):
@@ -118,8 +120,10 @@ class Person():
         Larry Bates ~ 19 ~ A- ~ 5500ml
         """
         #pass # TODO: Implement this
-        return self.name + " ~ " + str(getAge(self) + " ~ " + self.bloodType + " ~ " + str(self.bloodInBody) + "ml"
+        return self.name + " ~ " + str(getAge(self)) + " ~ " + self.bloodType + " ~ " + str(self.bloodInBody) + "ml"
+
+
 
 if __name__ == "__main__":
     p = Person("Hello", "from the other", "05-05-1995", "side")
-    pass # Can do some testing without running all the code
+    #pass # Can do some testing without running all the code
