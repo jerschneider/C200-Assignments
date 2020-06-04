@@ -19,7 +19,11 @@ class BloodBank:
         HINT: You know the types of blood (and no new ones will not be created (hopefully)) 
             and you know a blood bank with start empty. 
         """
-        pass # TODO: Implement this
+        #pass # TODO: Implement this
+        self.bloodBank = 0
+        self.bankName = name
+        self.users = users
+        self.location = location
     
     def totalUnitsOfBlood(self, bType=None):
         """
@@ -30,7 +34,9 @@ class BloodBank:
 
         HINT: bType=None is a default parameter
         """
-        pass # TODO: Implement this
+        #pass # TODO: Implement this
+        if bType = None:
+        return self.bloodBank
     
     def findPeople(self, bType):
         """
@@ -39,7 +45,8 @@ class BloodBank:
 
         Example: A+ can receive from A+, A-, O+, O-
         """
-        pass # TODO: Implement this
+        #pass # TODO: Implement this
+        if bType is in self.bloodBank
     
     def addPerson(self, p):
         """
