@@ -147,7 +147,7 @@ def main():
             print("Unable to transfer blood to {}: '{}' does not have enough of type {} ({})".format(p.name, b.name, p.bloodType, b.totalUnitsOfBlood(p.bloodType))) 
         if result == -2:
             print("Unable to transfer blood to {}: would not take blood".format(p.name)) 
-        # print(result)   ## drop it like its hot does not have enough B+ for Xenos Beach, and so the test code suggests he shouldnt be able to recieve a transfusion but he can also recieve B- blood of which there is plenty
+        # print(result) #Im not sure why drop it like it hot produces an incorrect result, but I think it has something to do with the entry not considering other bloop types????
 
 
         print("'{}' ({}) Status of Injury: {}".format(p.name, p.bloodInBody, p.isInjured()))
