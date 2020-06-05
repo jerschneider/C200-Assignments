@@ -2,10 +2,6 @@ from datetime import datetime
 
 class Person():
 
-        
-
-
-
     # https://www.simplifiedpython.net/python-convert-string-to-datetime/
     # Tool to help with date
 
@@ -97,9 +93,6 @@ class Person():
             return 0 #success
         else:
             return -1 #not success
-        '''
-        
-        '''
         
 
     

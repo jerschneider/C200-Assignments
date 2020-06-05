@@ -97,7 +97,7 @@ class BloodBank:
         else:
             status = p.transferBlood(quantity)
             if status == 0:
-                self.bloodBank[donationTypAssignment6e] -= quantity  #if it's a success then it removes the amount of blood from the target bank
+                self.bloodBank[donationType] -= quantity  #if it's a success then it removes the amount of blood from the target bank
                 return 0
             elif status == -1:
                 return -2 #returns negative -2 >>> injures

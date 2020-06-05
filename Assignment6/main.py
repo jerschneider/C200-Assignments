@@ -11,6 +11,7 @@ def listOfPeople(loc):
     objects for each person in the CSV file 
     """
     #pass # TODO: Implement this
+    #used a similar stratagy in decode
     with open("info.data") as openFile: 
         lines = []
         personList = []
@@ -21,7 +22,7 @@ def listOfPeople(loc):
             address = stringList[2]
             birthday = stringList[4]
             bloodType = stringList[6]
-            bloodType = bloodType.strip("\n")  
+            bloodType = bloodType.strip("\n") #strip is needed for parsing through newlines 
             if name != "Name":
                 personList.append(Person(name, address, birthday, bloodType)) 
     openFile.close()
