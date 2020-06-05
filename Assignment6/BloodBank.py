@@ -102,8 +102,6 @@ class BloodBank:
             elif status == -1:
                 return -2 #returns negative -2 >>> injures
                 
-
-        #pass # TODO: Implement this
     
     def receiveBlood(self, p, quantity=5):
         """
@@ -123,7 +121,6 @@ class BloodBank:
             return status
         elif status == -1:
             return status
-        #pass # TODO: Implement this
 
     
     def registeredUsers(self):
