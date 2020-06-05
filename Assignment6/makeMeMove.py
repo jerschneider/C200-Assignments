@@ -6,6 +6,8 @@ import random as rn
  #This is Mr. German's code from lab
  #currently reading documentation on pygame and rewatching labs
  #this problem is going to be nuts'
+ #https://pygame.readthedocs.io/en/latest/rect/rect.html#a-self-moving-a-rectangle
+ #reading some online documentation 
  """
  import sys
 import pygame
@@ -69,7 +71,7 @@ def main():
                 pygame.quit()
                 sys.exit()
     
-        screen.fill(WHITE)
+        screen.fill(WHITE) #this sets the background
     
         pygame.draw.rect(screen, RED, r)
 
