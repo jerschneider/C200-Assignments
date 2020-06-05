@@ -20,11 +20,14 @@ class BloodBank:
             and you know a blood bank with start empty. 
         """
         #pass # TODO: Implement this
-        self.bloodBank = 0
-        self.bankName = name
-        self.users = users
+        self.bloodBank = {}
+        for i in ["A+", "O+", "B+", "AB+", "A-", "O-", "B-", "AB-"]: # it loops through the bloodType list and establishes that each amount of blood is 0 
+            self.bloodBank[i] = 0
+        self.name = name
+        self.users = []
         self.location = location
-    
+         
+
     def totalUnitsOfBlood(self, bType=None):
         """
         Returns the total number of units of blood in the bank. 
@@ -35,8 +38,14 @@ class BloodBank:
         HINT: bType=None is a default parameter
         """
         #pass # TODO: Implement this
-        if bType = None:
-        return self.bloodBank
+        if bType == None:
+            bloodsum = 0
+            for i in self.bloodBank:
+                bloodsum += self.bloodBank[i]
+            return bloodsum #loops through each unit in the dictionary and sums up all of the values
+
+        else:
+            return self.bloodBank[bType]
     
     def findPeople(self, bType):
         """
@@ -46,7 +55,12 @@ class BloodBank:
         Example: A+ can receive from A+, A-, O+, O-
         """
         #pass # TODO: Implement this
-        if bType is in self.bloodBank
+        donorlist = []
+        recievetypes = self.DONATE_FROM[bType] #copeies out an entry from the dictionary
+        for person in self.users: #loops through all the users in the blood bank and checks to see if their blood type is in the list then adds them to the list of people who can donate
+            if person.bloodType in recievetypes:
+                donorlist.append(person)
+        return donorlist
     
     def addPerson(self, p):
         """
@@ -56,7 +70,8 @@ class BloodBank:
 
         This function does not return anything. 
         """
-        pass # TODO: Implement this
+        #pass # TODO: Implement this
+        self.users.append(p) #easy one, just adds people to the bank list
     
     def giveBlood(self, p, quantity=5):
         """
@@ -70,7 +85,25 @@ class BloodBank:
         Assuming the blood can be GIVEN to the person, subtract the quantity from 
             the bank and return 0. 
         """
-        pass # TODO: Implement this
+        bType = p.bloodType
+        donationType = None
+        recievelist = self.DONATE_TO[bType]
+        for i in recievelist: #loops through the blood bank for each type of blood a person can revieve, and checks to see if the bank has enough of that type for their needs
+            if self.bloodBank[i] >= quantity: #uses the transfer blood function from person.py
+                donationType = i
+                break
+        if donationType == None:
+            return -1
+        else:
+            status = p.transferBlood(quantity)
+            if status == 0:
+                self.bloodBank[donationTypAssignment6e] -= quantity  #if it's a success then it removes the amount of blood from the target bank
+                return 0
+            elif status == -1:
+                return -2 #returns negative -2 >>> injures
+                
+
+        #pass # TODO: Implement this
     
     def receiveBlood(self, p, quantity=5):
         """
@@ -83,7 +116,14 @@ class BloodBank:
         If you are unable to transfer blood from the person, return -1 since you can't add 
         blood the bank if the you can't get blood from the person.
         """
-        pass # TODO: Implement this
+        ##this does the opposite of giveBlood
+        status = p.transferBlood(-quantity) #this only goes through if it would be a sucess
+        if status == 0: 
+            self.bloodBank[p.bloodType] += quantity
+            return status
+        elif status == -1:
+            return status
+        #pass # TODO: Implement this
 
     
     def registeredUsers(self):
@@ -91,7 +131,8 @@ class BloodBank:
         Returns the number of people registered in this 
         blood bank
         """
-        pass # TODO: Implement this
+        #pass # TODO: Implement this
+        return len(self.users) #simple
 
     def __str__(self):
         """

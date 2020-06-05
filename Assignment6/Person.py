@@ -43,8 +43,8 @@ class Person():
         """
         #pass # TODO: Implement this
         #return currentTime - self.birthday
-        today = date.today()
-        return today.year - birthday.year - ((today.month, today.day) < (birthday.month, birthday.day))
+        today = datetime.today()
+        return today.year - self.birthday.year - ((today.month, today.day) < (self.birthday.month, self.birthday.day))
 
     
     def isInjured(self):
@@ -56,9 +56,9 @@ class Person():
         """
         #pass # TODO: Implement this
         if self.bloodInBody >= 5200 and self.bloodInBody <= 5600:
-            return True
-        else:
             return False
+        else:
+            return True
 
     def getBloodCount(self):
         """
@@ -88,9 +88,19 @@ class Person():
         #pass # TODO: Implement this
         if self.bloodInBody + count >= 5200 and self.bloodInBody + count <= 5600:
             self.bloodInBody += count #i used += becuase it takes up less space (i need this line to actually do the transfer)
-            return 0 #sucess
+            return 0 #success
+        elif self.bloodInBody < 5200 and self.bloodInBody + count <= 5600 and count > 0:
+            self.bloodInBody += count
+            return 0 #success
+        elif self.bloodInBody > 5600 and self.bloodInBody + count >= 5200 and count < 0:
+            self.bloodInBody += count
+            return 0 #success
         else:
-            return -1 #not sucess
+            return -1 #not success
+        '''
+        
+        '''
+        
 
     
 
@@ -120,7 +130,7 @@ class Person():
         Larry Bates ~ 19 ~ A- ~ 5500ml
         """
         #pass # TODO: Implement this
-        return self.name + " ~ " + str(getAge(self)) + " ~ " + self.bloodType + " ~ " + str(self.bloodInBody) + "ml"
+        return self.name + " ~ " + str(self.getAge()) + " ~ " + self.bloodType + " ~ " + str(self.bloodInBody) + "ml"
 
 
 

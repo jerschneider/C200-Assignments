@@ -20,7 +20,8 @@ def listOfPeople(loc):
             name = stringList[0] #first postion is going to be 0
             address = stringList[2]
             birthday = stringList[4]
-            bloodType = stringList[6]   
+            bloodType = stringList[6]
+            bloodType = bloodType.strip("\n")  
             if name != "Name":
                 personList.append(Person(name, address, birthday, bloodType)) 
     openFile.close()
@@ -143,10 +144,11 @@ def main():
             print("Unable to take blood: '{}' is injured".format(p.name))
         result = b.giveBlood(p, 100)
         if result == -1:
-            print("Unable to transfer blood to {}: '{}' does not have enough of type {} ({})".format(p.name, b.name, p.type, b.totalUnitsOfBlood(p.type))) 
+            print("Unable to transfer blood to {}: '{}' does not have enough of type {} ({})".format(p.name, b.name, p.bloodType, b.totalUnitsOfBlood(p.bloodType))) 
         if result == -2:
             print("Unable to transfer blood to {}: would not take blood".format(p.name)) 
-        # print(result)
+        # print(result)   ## drop it like its hot does not have enough B+ for Xenos Beach, and so the test code suggests he shouldnt be able to recieve a transfusion but he can also recieve B- blood of which there is plenty
+
 
         print("'{}' ({}) Status of Injury: {}".format(p.name, p.bloodInBody, p.isInjured()))
         print()
