@@ -2,14 +2,18 @@ import pygame
 import sys
 import random as rn
 
+
+
+#==================================NOTES=========================
  #make a rectangle class
  #This is Mr. German's code from lab
  #currently reading documentation on pygame and rewatching labs
  #this problem is going to be nuts'
  #https://pygame.readthedocs.io/en/latest/rect/rect.html#a-self-moving-a-rectangle
  #reading some online documentation 
- """
- import sys
+ 
+"""
+import sys
 import pygame
 
 class AlienInvasion:
@@ -44,12 +48,24 @@ if __name__ == '__main__':
     ai = AlienInvasion()
     ai.run_game()
 """
+
+#===================END OF NOTES==========================
+
+
+
+
+
+
 BLACK  = (  0,   0,   0)
 WHITE  = (255, 255, 255)
 BLUE   = (  0,   0, 255)
 GREEN  = (  0, 255,   0)
 RED    = (255,   0,   0)
 YELLOW = (255, 255,   0)
+
+rect = pygame.Rect(100, 50, 50, 50)
+v = [2, 2]
+
 
 
 
@@ -73,9 +89,11 @@ def main():
     
         screen.fill(WHITE) #this sets the background
     
-        pygame.draw.rect(screen, RED, r)
+        pygame.draw.rect(screen, RED, r) #our rectangle
 
         pygame.display.flip()
+
+        rect.move_ip(v) #need to define rect
 
 if __name__ == "__main__":
     main()
