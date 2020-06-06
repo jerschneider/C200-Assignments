@@ -2,6 +2,7 @@ import pygame
 import sys
 import random as rn
 
+import math
 
 #==================================NOTES=========================
  #make a rectangle class
@@ -61,21 +62,30 @@ BLUE   = (  0,   0, 255)
 GREEN  = (  0, 255,   0)
 RED    = (255,   0,   0)
 YELLOW = (255, 255,   0)
-
+#v = [rn.randint(1, 5), rn.randint(1, 5)]
 
 
 
 def main():
-
+    
+    rect_x = 50
+    rect_y = 50
+    
+    rectxSpeed = rn.randint(1, 5)
+    rectySpeed = rn.randint(1, 5)
+    
     pygame.init()
-        
-    size = [700, 700]
+    
+    size = [300, 300]
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("a magical rectangle")
+    
+    pygame.display.set_caption("shakespeare")
 
     rect = [10, 10, 10, 10]
     rect = pygame.Rect(100, 50, 50, 50)
-    v = [2, 2]
+    
+    clock = pygame.time.Clock()
+    
     while True:
         pygame.time.wait(40)
 
@@ -85,11 +95,45 @@ def main():
                 sys.exit()
         
         screen.fill(WHITE)
-        pygame.draw.rect(screen, RED, rect)
-        pygame.display.flip()
         
     
-                
+        
+        
+        #find a way to make the rect colors change
+        pygame.draw.rect(screen, RED, [rect_x, rect_y, 10, 10])
+        
+
+        #bouncy code
+
+        rect_x += rectxSpeed
+        rect_y += rectySpeed
+
+        #the rectangles cords
+        # 300screen - 10square = 290
+        if rect_y > 290:
+        if rect_y<0:
+            rectySpeed=-rectySpeed
+
+        if rect_x > 290 or rect_x<0:
+            rectxSpeed=-rectxSpeed
+
+
+        """
+        if rect_y > 250 or rect_y < 0:
+            rectySpeed = 5
+            rect_y = rectySpeed *- (math.pi/2)
+        if rect_x > 250 or rect_x < 0:
+            rectxSpeed = 5
+            rect_x = rectxSpeed *- (math.pi/2)
+        """
+        pygame.display.flip()
+        clock.tick(20)
+    pygame.quit()
+       
+       
+        
+    
+"""         
         rect.move_ip(v) #set v up top
         
         if rect.left < -50:
@@ -100,10 +144,9 @@ def main():
             v[1] *= -1
         if rect.bottom > -50:
             v[1] *= -1
-                
+"""        
         
-    
-    #pygame.quit()
+        
 
        
 if __name__ == "__main__":
