@@ -68,9 +68,6 @@ YELLOW = (255, 255,   0)
 def main():
     recColors = RED
 
-
-
-
     rect_x = 50
     rect_y = 50
     
@@ -117,7 +114,7 @@ def main():
         #split this up to perform color switch method
         if rect_y > 290: # bottom of screen
             #negative needed to be here to change direction
-            rectySpeed = rn.randint(-1, -5)
+            rectySpeed = rn.randint(-5, -1) #lol had to switch the range
             recColors = YELLOW
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
@@ -127,7 +124,7 @@ def main():
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
         if rect_x > 290: #right of screen
-            rectxSpeed = rn.randint(-1, -5)
+            rectxSpeed = rn.randint(-5, -1)
             recColors = BLUE
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
         if rect_x < 0: #left of screen
