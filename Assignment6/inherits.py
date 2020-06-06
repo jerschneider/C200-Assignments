@@ -5,15 +5,11 @@
     #quizzes, exams, labs and homework, and attendance
 
     ##things to consider for Assignments >>> the 
-#
-
-
-
 ##superclass
 #superclass is course
 #subclass is assignemnts
 
-#dictionary of students
+#list of students
 
 import random as rn
 
@@ -39,7 +35,7 @@ class course():
         del self.students[name]
     class assignment(): #specific 
         def __init__(self, xType, pointValue, xStudent, name, topic):
-            self.xType = xType
+            self.xType = xType 
             self.pointValue = pointValue
             self.xStudent = xStudent
             self.name = name
