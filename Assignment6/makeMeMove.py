@@ -65,9 +65,13 @@ YELLOW = (255, 255,   0)
 #v = [rn.randint(1, 5), rn.randint(1, 5)]
 
 
-
 def main():
-    
+    if recColors == None:
+        recColors = RED
+
+
+
+
     rect_x = 50
     rect_y = 50
     
@@ -100,7 +104,8 @@ def main():
         
         
         #find a way to make the rect colors change
-        pygame.draw.rect(screen, RED, [rect_x, rect_y, 10, 10])
+        
+        pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
         
 
         #bouncy code
@@ -110,22 +115,28 @@ def main():
 
         #the rectangles cords
         # 300screen - 10square = 290
+        #split this up to perform color switch method
         if rect_y > 290:
+            rectySpeed=-rectySpeed
+            recColors = YELLOW
+            #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
+
         if rect_y<0:
             rectySpeed=-rectySpeed
+            recColors = GREEN
+            #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
-        if rect_x > 290 or rect_x<0:
+        if rect_x > 290:
             rectxSpeed=-rectxSpeed
+            recColors = BLUE
+            #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
+        if rect_x<0:
+            rectxSpeed=-rectxSpeed
+            recColors = BLACK
+            #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
 
-        """
-        if rect_y > 250 or rect_y < 0:
-            rectySpeed = 5
-            rect_y = rectySpeed *- (math.pi/2)
-        if rect_x > 250 or rect_x < 0:
-            rectxSpeed = 5
-            rect_x = rectxSpeed *- (math.pi/2)
-        """
+        
         pygame.display.flip()
         clock.tick(20)
     pygame.quit()
