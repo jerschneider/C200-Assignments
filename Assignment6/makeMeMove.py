@@ -3,7 +3,6 @@ import sys
 import random as rn
 
 
-
 #==================================NOTES=========================
  #make a rectangle class
  #This is Mr. German's code from lab
@@ -63,37 +62,49 @@ GREEN  = (  0, 255,   0)
 RED    = (255,   0,   0)
 YELLOW = (255, 255,   0)
 
-rect = pygame.Rect(100, 50, 50, 50)
-v = [2, 2]
-
 
 
 
 def main():
+
     pygame.init()
         
-    size = [300, 300]
+    size = [700, 700]
     screen = pygame.display.set_mode(size)
-    pygame.display.set_caption("C200 CHANGE")
+    pygame.display.set_caption("a magical rectangle")
 
-    r = [10, 10, 10, 10]
-
+    rect = [10, 10, 10, 10]
+    rect = pygame.Rect(100, 50, 50, 50)
+    v = [2, 2]
     while True:
-        
         pygame.time.wait(40)
-        
-        for event in pygame.event.get(): 
-            if event.type == pygame.QUIT: 
+
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
                 pygame.quit()
                 sys.exit()
-    
-        screen.fill(WHITE) #this sets the background
-    
-        pygame.draw.rect(screen, RED, r) #our rectangle
-
+        
+        screen.fill(WHITE)
+        pygame.draw.rect(screen, RED, rect)
         pygame.display.flip()
+        
+    
+                
+        rect.move_ip(v) #set v up top
+        
+        if rect.left < -50:
+            v[0] *= -1 # (similar to += but multiplies)
+        if rect.right > 200: #i had to set this to 100 to get the rectangle to even move
+            v[0] *= -1
+        if rect.top < 50:
+            v[1] *= -1
+        if rect.bottom > -50:
+            v[1] *= -1
+                
+        
+    
+    #pygame.quit()
 
-        rect.move_ip(v) #need to define rect
-
+       
 if __name__ == "__main__":
     main()
