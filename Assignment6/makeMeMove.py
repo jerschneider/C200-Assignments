@@ -66,8 +66,7 @@ YELLOW = (255, 255,   0)
 
 
 def main():
-    if recColors == None:
-        recColors = RED
+    recColors = RED
 
 
 
@@ -116,22 +115,23 @@ def main():
         #the rectangles cords
         # 300screen - 10square = 290
         #split this up to perform color switch method
-        if rect_y > 290:
-            rectySpeed=-rectySpeed
+        if rect_y > 290: # bottom of screen
+            #negative needed to be here to change direction
+            rectySpeed = rn.randint(-1, -5)
             recColors = YELLOW
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
-        if rect_y<0:
-            rectySpeed=-rectySpeed
+        if rect_y < 0: # top of screen
+            rectySpeed = rn.randint(1, 5)
             recColors = GREEN
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
-        if rect_x > 290:
-            rectxSpeed=-rectxSpeed
+        if rect_x > 290: #right of screen
+            rectxSpeed = rn.randint(-1, -5)
             recColors = BLUE
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
-        if rect_x<0:
-            rectxSpeed=-rectxSpeed
+        if rect_x < 0: #left of screen
+            rectxSpeed = rn.randint(1, 5)
             recColors = BLACK
             #pygame.draw.rect(screen, recColors, [rect_x, rect_y, 10, 10])
 
