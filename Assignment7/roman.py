@@ -14,8 +14,8 @@
 # 100 >>> C
 
 def numtoRom(num):
-    number = [1, 4, 5, 6, 9, 10, 20, 40, 50, 90, 100]
-    roman = ["I", "IV", "V", "VI", "IX", "X", "XX", "XL", "L", "XC", "C" ]
+    number = (1, 4, 5, 6, 9, 10, 20, 40, 50, 90, 100)
+    roman = ("I", "IV", "V", "VI", "IX", "X", "XX", "XL", "L", "XC", "C")
     romanNumber = ""
     for i in range(len(number)):
         numIsDivded = int(num / number[i])
@@ -44,6 +44,9 @@ if __name__ == "__main__":
     num = 2
     print(" is converted to >>>", end = " " )
 """
-print(numtoRom(19))
+print(numtoRom(1))
+print(numtoRom(5))
+print(numtoRom(10))
+
 
 
