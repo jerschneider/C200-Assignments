@@ -30,24 +30,14 @@ def numtoRom(number):
             digits.pop(0)
             #print(digits[0])
     return result
-	
+
+#test code 
 if __name__ == "__main__": 
-	number = 349
-	print("Roman numeral is:" + numtoRom(number))
+    for i in 100:
+        print(i, " ", numtoRom(i), " , ")
  
  
 
-    
-##TestCode
-#use :
-"""
-if __name__ == "__main__":
-    num = 2
-    print(" is converted to >>>", end = " " )
-"""
-print(numtoRom(1))
-print(numtoRom(5))
-print(numtoRom(10))
 
 
 
