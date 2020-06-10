@@ -16,20 +16,34 @@
 def numtoRom(num):
     number = [1, 4, 5, 6, 9, 10, 20, 40, 50, 90, 100]
     roman = ["I", "IV", "V", "VI", "IX", "X", "XX", "XL", "L", "XC", "C" ]
-
+    romanNumber = ""
+    for i in range(len(number)):
+        numIsDivded = int(num / number[i])
+        romanNumber += roman[i] * numIsDivded
+        num -= number[i] * numIsDivded
+    return romanNumber
+ 
+ 
+ 
+"""   
     i = 12
     while num:
         numIsDivded = num // number[i]
         num %= number[i]
+        
         while numIsDivded:
             print(roman[i], end = "")
             numIsDivided -= 1
-            i -= 1
-
+        i -= 1
+"""           
+    
 ##TestCode
 #use :
-#if __name__ == "__main__":
-    #num = 19
-    #print(num, " is converted to >>>", end = " " )
-print(numtoRom(10))
+"""
+if __name__ == "__main__":
+    num = 2
+    print(" is converted to >>>", end = " " )
+"""
+print(numtoRom(19))
+
 
