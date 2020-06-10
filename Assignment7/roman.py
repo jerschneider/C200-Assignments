@@ -1,6 +1,6 @@
 #create a function that takes a number and converts it to a roman numeral
 # hint: task is made easier if you use modulo and integer divsion
-
+#insporation >>> https://www.geeksforgeeks.org/converting-decimal-number-lying-between-1-to-3999-to-roman-numerals/
 # 1 >>> I
 # 4 >>> IV
 # 5 >>> V
@@ -33,8 +33,8 @@ def numtoRom(number):
 
 #test code 
 if __name__ == "__main__": 
-    for i in 100:
-        print(i, " ", numtoRom(i), " , ")
+    for i in range(1, 101):
+        print(i, numtoRom(i), ", ", end = '')
  
  
 
