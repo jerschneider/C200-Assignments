@@ -13,29 +13,31 @@
 # 90 >>> XC
 # 100 >>> C
 
-def numtoRom(num):
-    number = (1, 4, 5, 6, 9, 10, 20, 40, 50, 90, 100)
-    roman = ("I", "IV", "V", "VI", "IX", "X", "XX", "XL", "L", "XC", "C")
-    romanNumber = ""
-    for i in range(len(number)):
-        numIsDivded = int(num / number[i])
-        romanNumber += roman[i] * numIsDivded
-        num -= number[i] * numIsDivded
-    return romanNumber
+def numtoRom(number):
+    digits = [[1000, 'M'], [900, 'CM'], [500, 'D'], [400, 'CD' ], [100, 'C'], [90, 'XC'], [50, 'L'], [40, 'XL'], [10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']]
+
+    result = ""
+    while number:
+            tup = digits[0]
+            #print("tup", tup)
+            quotient = number // tup[0] 
+            number %= tup[0]
+            #print("number", number)
+            #print(number % tup[0])
+            while quotient: 
+                result += tup[1] 
+                quotient -= 1
+            
+            digits.pop(0)
+            #print(digits[0])
+    return result
+	
+if __name__ == "__main__": 
+	number = 349
+	print("Roman numeral is:" + numtoRom(number))
  
  
- 
-"""   
-    i = 12
-    while num:
-        numIsDivded = num // number[i]
-        num %= number[i]
-        
-        while numIsDivded:
-            print(roman[i], end = "")
-            numIsDivided -= 1
-        i -= 1
-"""           
+
     
 ##TestCode
 #use :
