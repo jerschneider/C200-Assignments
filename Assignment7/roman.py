@@ -23,7 +23,6 @@ def numtoRom(number):
             quotient = number // tup[0] 
             number %= tup[0]
             #print("number", number)
-            #print(number % tup[0])
             while quotient: 
                 result += tup[1] 
                 quotient -= 1
