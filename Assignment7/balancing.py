@@ -53,7 +53,7 @@ def balancing(paren):
 
 
 
-#Example output from problem
+#Example output from assignment7 pdf
 print("1 ", balancing("a(a(a(a(")) # Output: False
 print("2 ", balancing("()()()()()((())())")) # Output: True
 print("3 ", balancing("((()))")) # Output: True

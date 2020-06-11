@@ -27,20 +27,18 @@ class student(Person):
         super().__init__(name, birthYear)
         self.credits = startCredits
         self.major = major
-        self.studentID = studentID
+        self.studentID = studentID #i just gave the students an id number based on their order of creation. 
+        #since we don't have many students it might look alittle weird
         self.name = name
     
-def hasCredits(self):
+    def hasCredits(self):
         if self.credits >= 1:
             return True
         else:
             return False
-    
-    
-        
-        
-    #I need to use a random generator here in function to make student's ID
-    # I need to add a credit counter
+
+    def earnedCredits(self, credits):
+        self.credits += credits
 
     
     
@@ -53,10 +51,6 @@ class instructor(Person):
         self.officeRoom = officeRoom
         self.name = name
         self.students = []
-
-    def earnedCredits(self, xStudent, credits):
-        xStudent = self.xStudent
-        xStudent.credits += credits
         
     def getMajors(self):
         majorslist = {}
@@ -113,7 +107,7 @@ for i in instructorlist:
 examplestudent = random.choice(studentlist)
 exampleinstructor = random.choice(instructorlist)
 (day, hours) = exampleinstructor.officeHours
-print("Hi my name is", exampleinstructor.name)
+print("Hi my name is", exampleinstructor.name, "and I was born in", exampleinstructor.birthYear)
 print("My office hours are on", day, "at " + str(hours) + ". You can find me at", exampleinstructor.officeRoom)
 print("My friends are: ", end="")
 for i in exampleinstructor.friends:
@@ -129,3 +123,6 @@ majorsdict = list(majorscount.keys())
 print("I have", majorscount[majorsdict[0]], "students in the", majorsdict[0], "major")
 print("I teach in the following deparments:")
 print(majorsdict)
+
+print("My name is", examplestudent.name)
+print("I have an ID number and it is", examplestudent.studentID)
