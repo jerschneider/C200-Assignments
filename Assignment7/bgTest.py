@@ -51,6 +51,7 @@ def main():
     # You are allowed to make new graphs to help with testing
 
     print("Testing Adjacency Matrix")
+    
     # FIXME: This does not test if you adjacency Matrix is created correctly. 
     #   If you want to ensure it works, you need to write your own tests (required)
 
@@ -58,7 +59,13 @@ def main():
     #       Piazza (publicly) and you can see if you are able to solve it
     #       or if give a chance for some to get take a stab at it (without
     #       using the program)
-
+    # added
+    testmatrix = [[0, 1, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 1], [0, 1, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0]]
+    result = g.adjMatrix()
+    if result != testmatrix:
+        print("Incorrect adjacency matrix!")
+        print("Expected: ", testmatrix)
+        print("Result: ", result)
 
     print("\n"*3)
     print("=" * 10 + "New Graph" + "=" * 10)
@@ -91,8 +98,27 @@ def main():
 
     print()
     print("Testing Delete Edges")
-    # FIXME: This does not test if you delete nodes and edges correctly. 
+    # FIXME: This does not test if you delete nodes and edges correctly.  
     #   If you want to ensure it works, you need to write your own tests (required)
+    #added
+    toDelete = [(1,6), (1,3)]
+    toDeleteResults = [-1, 1]
+    toDeleteEdgeResult =[
+        {1: [2, 3, 5], 2: [], 3: [], 5: [], 6: [2]},
+        {1: [2, 5], 2: [], 3: [], 5: [], 6: [2]}
+    ]
+
+    print("=" * 10)
+    for i in range(len(toDelete)):
+        d = toDelete[i]
+        result = newGraph.del_edge(d)
+        if result != toDeleteResults[i]:
+            print(d)
+            print("Deleting edge  ", d, " should have returned " + str(-1 * result) + ". Returned ", result)
+        
+        if newGraph.edges != toDeleteEdgeResult[i]:
+            print("Removing Edge ({}) Expected results: {} \t Given Results: {}".format(d, toDeleteEdgeResult[i], newGraph.edges))
+    print("=" * 10 + "\n")
 
 
 if __name__ == "__main__":

@@ -16,15 +16,14 @@
 class Person():
     def __init__(self, name, birthYear):
         self.name = name
-        self.birthYear = yearOfBirth
-        self.students = []
-        self.instructor = []
+        self.birthYear = birthYear
         self.friends = []
     
     
     
-    class student():
-        def __init__(self, name, major, startCredits = 0):
+    class student(Person):
+        def __init__(self, name, birthYear, major, startCredits = 0):
+            super().__init__(name, birthYear)
             self.credits = startCredits
             self.major = major
             self.studentID = []
@@ -48,17 +47,27 @@ class Person():
     
     
     
-    class instructor():
-        def __init__(self, name, startSalary = 0, officeHours, officeRoom, xStudent):
+    class instructor(Person):
+        def __init__(self, name, birthYear, officeHours, officeRoom, startSalary = 50000):
+            super().__init__(name, birthYear)
             self.startSalary = startSalary
-            self.officeHours = []
-            self.officeRoom = []
-            self.listOfStudents = []
+            self.officeHours = officeHours
+            self.officeRoom = officeRoom
             self.name = name
 
-        def earnedCredits(self, credits):
+        def earnedCredits(self, xStudent, credits):
             xStudent = self.xStudent
             xStudent.credits += credits
+        
+        def getMajors(self):
+            majorslist = {}
+            for i in self.listOfStudents:
+                if not i in majorslist:
+                    majorslist[i] = 1
+                else:
+                    majorslist[i] += 1
+            return majorslist
+
 
     def giveOfficeHours(self, name, officeHours, officeRoom):
         for i in self.instructors:
@@ -67,12 +76,20 @@ class Person():
             print(i.name + "has office hours at" + name)
 
 ##test code
-studentList = "Edwin Johnston", "Isabella Stewart", "Donna Reed", "Luke Hall", "Carina Hunt", "Derek Chapman", "Emily Harris", "Arthur Harris", "Jeremy Schneider", "Natalie Mitchell", "Nicholas Douglas", "Sawyer Roberts", "Adrian Thompson", "Richard Long"]
-testperson = person("people")
-for i in studentlist:
-    testperson.addStudent(i)
-    print(testperson.students)
-    testperson.giveOfficeHours("time", 2:00, "room", 234)
+studentNames = ["Edwin Johnston", "Isabella Stewart", "Donna Reed", "Luke Hall", "Carina Hunt", "Derek Chapman", "Emily Harris", "Arthur Harris", "Jeremy Schneider", "Natalie Mitchell", "Nicholas Douglas", "Sawyer Roberts", "Adrian Thompson", "Richard Long"]
+studentMajors = ["Computer Science", "Computer Science", "Informatics", "Informatics", "Informatics", "Computer Science", "Biology", "Biology", "Biology", "Gender Studies", "Gender Studies", "English", "English", "English"]
+studentYears = [1980, 1987, 1989, 1996, 1989, 1982, 1988, 1990, 1982, 1996, 1985, 1998, 1989, 1986]
+testperson = Person()
+instructorsNames = ["Belinda Hamilton", "Derek Bailey", "Lucy Perkins", "Leonardo Williams", "Jacob Riley", "Lenny Murray"]
+instructorsYears = [1964, 1968, 1967, 1980, 1962, 1967]
+instructorsHours = [("Tuesday", "4:00-6:30"), ("Wednesday", "2:30-3:30"), ("Monday", "3:00-4:30"), ("Thursday", "3:00-5:00"), ("Friday", "4:00-5:00")]
+instructorsRooms = ["Lindley 220", "Luddy 310", "Luddy 215", "Woodburn 110", "Hodge 350", "Woodburn 120"]
+studentlist = []
+instructorlist = []
+for i in range(1, 15):
+    studentList.append(student(studentNames[i], studentYears[i] studentMajors[i]))
+for i in range(1, 7):
+    instructorlist.append(instructor(instructorNames[i], instructorsYears[i], instructorsHours[i], instructorsRooms[i]))
 
         
 

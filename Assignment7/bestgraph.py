@@ -20,6 +20,7 @@ class Graph:
         (one, two) = pair #maybe change this to (start, end) for consistency
         if one in self.nodes and two in self.nodes and two in self.edges[one]:
             self.edges[one].remove(two)
+            return 1
         else:
             return -1
 
@@ -41,12 +42,12 @@ class Graph:
             return -1 #returns -1(false) if the node already exists
         else:
             self.nodes += [node]
-            self.edges[node] = []
+            self.edges[node] = [] #then creats a dict entry
             return 1
     def del_node(self, node):
         if node in self.nodes:
             self.nodes.remove(node)
-            self.edges.pop(node)
+            del self.edges[node] #deletes the key
             for key in self.edges.keys():
                 if node in self.edges[key]:
                     self.edges[key].remove(node)
@@ -67,6 +68,7 @@ class Graph:
                 else:
                     row += [0]
             result.append(row)
+        #print(result)
         return result
     
     #Mr german had this included in his example and Iam not sure what it does
