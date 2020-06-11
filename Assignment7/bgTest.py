@@ -92,7 +92,7 @@ def main():
         if result != toDeleteResults[i]:
             print("Deleting node  " + str(d) + " should have returned " + str(-1 * result) + ". Returned " + str(result))
         
-        if newGraph.edges != toDeleteEdgeResult[i]:
+        if newGraph.paths != toDeleteEdgeResult[i]:
             print("Removing Node ({}) Expected results: {} \t Given Results: {}".format(d, toDeleteEdgeResult[i], newGraph.edges))
     print("=" * 10 + "\n")
 
@@ -116,7 +116,7 @@ def main():
             print(d)
             print("Deleting edge  ", d, " should have returned " + str(-1 * result) + ". Returned ", result)
         
-        if newGraph.edges != toDeleteEdgeResult[i]:
+        if newGraph.paths != toDeleteEdgeResult[i]:
             print("Removing Edge ({}) Expected results: {} \t Given Results: {}".format(d, toDeleteEdgeResult[i], newGraph.edges))
     print("=" * 10 + "\n")
 
