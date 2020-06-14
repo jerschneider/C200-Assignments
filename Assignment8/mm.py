@@ -5,36 +5,49 @@ import numpy as np
 def mm(a,b):
     #TODO: Implement function
 	#return 1
-"""
+
     for x in range(len(a)):
         for y in range(len(b[0])): ##start iterating at the 0 pos of b with this nested loop (this targets columns)
             for z in range(len(b)): #rows
                 axb = a[x][z] * b[z][y]
                 return axb
-"""
 
-
-"""    
     ##numpy test code
-    a = []
-    b = []
-    axb = np.dot(a, b)
-    return axb
-"""
+    #axb = np.dot(a, b)
+    #return axb
+
 
 
 #INPUT scalar n and matrix a
 #RETURN scalar product na
 def sm(n,a):
     #TODO:Implement function
-	return 1
+	#return 1
+    for x in range(n):
+        for y in range(n):
+            return a[x][y]
+    ##numpy test code
+     #return n * np.array(a)
 
 
 #INPUT matrix n x m
 #RETURN transpose matrix m x n
 def tp(a):
     #TODO:Implement function
-	return 1
+	#return 1
+    base = [[0,0,0],[0,0,0]]
+    for x in range(len(a)): #columns
+        for y in range(len(a[0])): #rows
+            base[y][x] = a[x][y]
+    return base
+for a in tp([[12,7],[4 ,5], [3 ,8]]):
+    print(a)
+    
+    
+    
+    
+    ##numpy test code
+    #return np.transpose(a)
 
 
 #INPUT two matrices a,b
