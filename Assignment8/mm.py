@@ -9,8 +9,8 @@ def mm(a,b):
     for x in range(len(a)):
         for y in range(len(b[0])): ##start iterating at the 0 pos of b with this nested loop (this targets columns)
             for z in range(len(b)): #rows
-                axb = a[x][z] * b[z][y]
-                return axb
+                aTimesb = a[x][z] * b[z][y]
+                return aTimesb
 
     ##numpy test code
     #axb = np.dot(a, b)
@@ -34,7 +34,8 @@ def sm(n,a):
 #RETURN transpose matrix m x n
 def tp(a):
     #TODO:Implement function
-	#return 1
+	return 1
+"""    
     base = [[0,0,0],[0,0,0]]
     for x in range(len(a)): #columns
         for y in range(len(a[0])): #rows
@@ -42,7 +43,7 @@ def tp(a):
     return base
 for a in tp([[12,7],[4 ,5], [3 ,8]]):
     print(a)
-    
+"""   
     
     
     
@@ -54,7 +55,12 @@ for a in tp([[12,7],[4 ,5], [3 ,8]]):
 #RETURN sum a + b
 def add_m(a,b):
     #TODO:Implement function
-	return 1
+	#return 1
+    if len(a) == len(b) and len(a[0]) == len(b[0]):
+        for y in range(len(a[0])):
+            for x in range(len(a)):
+                aAddb = a[x][y] + b[x][y]
+                return aAddb
 
 
 if __name__ == "__main__":

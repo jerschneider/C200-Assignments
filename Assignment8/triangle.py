@@ -23,7 +23,7 @@ def triangle(loc,width):
     Return a tuple of 3 points, representing the triangle. 
     """
     #pass # TODO: Implement function
-    points = math.sqrt((3/4) * (width**2) )
+    points = math.sqrt((3/4) * width**2)
     bot, left, right = (loc[0] + width / 2, loc[1] + points), (loc), (loc[0] + width, loc[1])
     return (bot, left, right)
     
@@ -49,12 +49,13 @@ def s(loc,width):
     x, y = loc
     if width > 1:
         draw_triangle(loc, width)
-        points = manth.sqrt((3/4) * width**2)
+        points = math.sqrt((3/4) * width**2)
         s((loc[0] + width/4, loc[1] + points/2), width/2)
         s(loc, width/2)
+        s((loc[0] + width/2, loc[1]), width/2)
 
 
-#s((10,10),440)
+s((10,10),440)
 
 while True:
     pygame.draw.rect(DISPLAYSURF, (0, 0, 0), [0, 0, 500, 400], 2) # Used to show the bounds
@@ -63,4 +64,3 @@ while True:
             pygame.quit()
             sys.exit()
     pygame.display.update()
-	
