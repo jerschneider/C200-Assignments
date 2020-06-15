@@ -23,6 +23,12 @@ def triangle(loc,width):
     Return a tuple of 3 points, representing the triangle. 
     """
     #pass # TODO: Implement function
+    points = math.sqrt((3/4) * (width**2) )
+    bot, left, right = (loc[0] + width / 2, loc[1] + points), (loc), (loc[0] + width, loc[1])
+    return (bot, left, right)
+    
+    #(x, y) = loc
+    #return ((1, 2), (2, 3), (3, 4))
 
 DISPLAYSURF.fill(WHITE)
 
