@@ -36,19 +36,25 @@ DISPLAYSURF.fill(WHITE)
 #(triangle(loc,w)) is a tuple of tuples...)
 def draw_triangle(loc, w):
     pygame.draw.polygon(DISPLAYSURF, BLUE , (triangle(loc,w)),1)
-    ##this is code from stackoverflow >>>#pygame.draw.polygon(screen, white, [[x, y], [x + size, y], [x, y - size]])
-
 #INPUT location and width
 #RETURN nothing -- follows algorithm
+
 def s(loc,width):
     """
     Given the starting drawing location, and width of each side of the triangle.
 
     Complete the recursive function.
     """
-    pass # TODO: Implement Function
+    #pass # TODO: Implement Function
+    x, y = loc
+    if width > 1:
+        draw_triangle(loc, width)
+        points = manth.sqrt((3/4) * width**2)
+        s((loc[0] + width/4, loc[1] + points/2), width/2)
+        s(loc, width/2)
 
-s((10,10),440)
+
+#s((10,10),440)
 
 while True:
     pygame.draw.rect(DISPLAYSURF, (0, 0, 0), [0, 0, 500, 400], 2) # Used to show the bounds
