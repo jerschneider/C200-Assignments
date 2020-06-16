@@ -34,16 +34,24 @@ def sm(n,a):
 #RETURN transpose matrix m x n
 def tp(a):
     #TODO:Implement function
-	return 1
-"""    
-    base = [[0,0,0],[0,0,0]]
+	#return 1
+    base = []
+    for i in range(len(a[0])):  ##I know this loop does the same thing as numpy.zeroes but that function puts in a bunch of extra junk so i just did it myself
+        item = []
+        for x in range(len(a)):
+            item.append(0)
+        base.append(item)
+    #for i in range(len(a)):
+    #    base.append(np.zeros(len(a[1])))
+    #print(base)
     for x in range(len(a)): #columns
         for y in range(len(a[0])): #rows
             base[y][x] = a[x][y]
     return base
+'''
 for a in tp([[12,7],[4 ,5], [3 ,8]]):
     print(a)
-"""   
+'''
     
     
     
