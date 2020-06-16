@@ -1,5 +1,5 @@
 from os import listdir # TODO: Replace me with correct function
-from os.path import join, exists  # TODO: Replace me with correct function
+from os.path import join, isdir  # TODO: Replace me with correct function
 
 
 
@@ -28,17 +28,21 @@ def getDirs(wd):
     """
     resultList = []
     for f in listdir(wd): # TODO: Find function from OS that will complete this function
-        if exists(join(wd, f)): # TODO: Find this function in the os.path directory 
+        if isdir(join(wd, f)): # TODO: Find this function in the os.path directory 
             resultList.append(join(wd, f))
     return resultList
 
 
 
-"""
+
 if __name__ == "__main__":
     wd = input("working directory>>>") # TODO: Replace this we a SINGLE command line argument 
     dfsFiles(wd) 
-"""
 
+## replace this with code that takes a command line input
+## and runs dfsFiles with it
+## LOOK UP SYNTAX FOR THIS
+"""
 wd = "/home/jeremy/Documents"
 dfsFiles(wd)
+"""
