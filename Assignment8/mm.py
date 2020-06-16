@@ -72,8 +72,73 @@ def add_m(a,b):
 
 
 if __name__ == "__main__":
+    print("")
+    print("Larry's Test code")
     a = np.array([[1,2,4],[3,4,3]])
     b = np.array([[-1,0],[1,-5],[-3,1]])
+    print("numpy product\n", np.dot(a,b))
+    d = mm(a,b)
+    print(d)
+
+    print("numpy scalar product\n", 4*a)
+    e = sm(4,a)
+    print(e)
+
+    print("numpy tranpose\n", np.transpose(a))
+    f = tp(a)
+    print(f)
+
+    print("numpy addition\n", a + a)
+    g = add_m(a,a)
+    print(g)
+
+
+    
+    print("")
+    print("myTest 1")
+    a = np.array([[1,2,3],[4,5,6]])
+    b = np.array([[-14,10],[12,-25],[-23,51]])
+    print("numpy product\n", np.dot(a,b))
+    d = mm(a,b)
+    print(d)
+
+    print("numpy scalar product\n", 4*a)
+    e = sm(4,a)
+    print(e)
+
+    print("numpy tranpose\n", np.transpose(a))
+    f = tp(a)
+    print(f)
+
+    print("numpy addition\n", a + a)
+    g = add_m(a,a)
+    print(g)
+
+    print("")
+    print("myTest 2")
+    a = np.array([[11,21,13],[14,35,46]])
+    b = np.array([[-14,1],[1,-5],[-3,-51]])
+    print("numpy product\n", np.dot(a,b))
+    d = mm(a,b)
+    print(d)
+
+    print("numpy scalar product\n", 4*a)
+    e = sm(4,a)
+    print(e)
+
+    print("numpy tranpose\n", np.transpose(a))
+    f = tp(a)
+    print(f)
+
+    print("numpy addition\n", a + a)
+    g = add_m(a,a)
+    print(g)
+
+
+    print("")
+    print("myTest 3")
+    a = np.array([[3,2,1],[1,1,4]])
+    b = np.array([[-4,91],[91,-5],[-39,-51]])
     print("numpy product\n", np.dot(a,b))
     d = mm(a,b)
     print(d)
