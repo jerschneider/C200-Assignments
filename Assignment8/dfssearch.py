@@ -1,6 +1,6 @@
 from os import listdir # TODO: Replace me with correct function
 from os.path import join, isdir  # TODO: Replace me with correct function
-
+import sys
 
 
 def dfsFiles(wd):
@@ -36,6 +36,9 @@ def getDirs(wd):
 
 
 if __name__ == "__main__":
+    #make this into a loop
+    word = sys.argv[1]
+    print("commandline argument: ", word)
     wd = input("working directory>>>") # TODO: Replace this we a SINGLE command line argument 
     dfsFiles(wd) 
 
